@@ -237,3 +237,28 @@ When investigating an EDR alert, a SOC Analyst may:
 - NIST SP 800-61 Rev.2 – Computer Security Incident Handling Guide
 - Microsoft Defender for Endpoint Documentation
 - CrowdStrike Falcon Documentation
+## Real-World Scenario
+
+### Scenario
+
+An employee receives a phishing email containing a malicious attachment.
+
+### Detection
+
+The EDR platform detects abnormal PowerShell execution initiated by Microsoft Word.
+
+### Investigation
+
+The SOC analyst reviews:
+- Process Tree
+- Network Connections
+- File Hash
+- Command Line
+- User Activity
+
+### Response
+
+- Isolate the endpoint.
+- Terminate malicious processes.
+- Block IOCs.
+- Document the incident.
