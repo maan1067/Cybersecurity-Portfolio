@@ -1,5 +1,7 @@
 # Pyramid of Pain
 
+![Pyramid of Pain](Assets/pyramid-of-pain.webp)
+
 ## Overview
 
 The Pyramid of Pain is a cybersecurity model created by David Bianco that categorizes Indicators of Compromise (IOCs) based on the level of difficulty an attacker faces when forced to change them. The model helps defenders prioritize detections that have the greatest operational impact on adversaries.
