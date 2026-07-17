@@ -1,6 +1,6 @@
 # Pyramid of Pain
 
-![Pyramid of Pain](Assets/pyramid-of-pain.webp)
+![Pyramid of Pain](pyramid-of-pain.png)
 
 ## Overview
 
