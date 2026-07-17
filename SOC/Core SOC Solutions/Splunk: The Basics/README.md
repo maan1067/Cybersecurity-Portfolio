@@ -1,12 +1,6 @@
 # Splunk: The Basics
 
-<p align="center">
-  <img src="images/splunk_logo.png" width="250">
-</p>
-
-<p align="center">
-An introduction to Splunk Enterprise, Security Information and Event Management (SIEM), log analysis, and Security Operations Center (SOC) investigations.
-</p>
+<img width="1472" height="292" alt="image" src="https://github.com/user-attachments/assets/d6d6f7a7-4b5c-4082-aeae-6bb5acc25c5b" />
 
 ---
 
