@@ -1,6 +1,6 @@
 # Splunk: The Basics
 
-<img width="1472" height="292" alt="image" src="https://github.com/user-attachments/assets/d6d6f7a7-4b5c-4082-aeae-6bb5acc25c5b" />
+https://th.bing.com/th/id/OIP.jWCJlCNoO7Qm7jOKgRZDVQHaEK?w=297&h=180&c=7&r=0&o=7&dpr=1.3&pid=1.7&rm=3
 
 ---
 
