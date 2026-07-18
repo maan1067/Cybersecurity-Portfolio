@@ -194,7 +194,7 @@ Common protocols:
 * ICMP
 
 ---
-
+![Unified Kill Chain](unified-kill-chain(2).png)
 ## Pivoting
 
 Use one compromised machine to access additional internal systems.
