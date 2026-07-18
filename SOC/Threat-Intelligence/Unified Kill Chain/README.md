@@ -1,4 +1,10 @@
+<p align="center">
+  <img src="images/unified-kill-chain.png" alt="Unified Kill Chain Framework" width="900">
+</p>
 
+<p align="center">
+  <em>Unified Kill Chain Framework</em>
+</p>
 # Unified Kill Chain
 
 > A comprehensive cybersecurity framework developed by **Paul Pols (2017)** that models the complete lifecycle of a cyber attack. It extends the traditional Cyber Kill Chain by integrating concepts from **MITRE ATT&CK** and covering attacker activities from reconnaissance to achieving objectives.
