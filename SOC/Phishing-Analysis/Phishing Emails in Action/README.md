@@ -258,7 +258,7 @@ This phishing email impersonates **Netflix Billing** and attempts to trick recip
 The objective is to convince the victim to open the attachment and submit their account credentials on a fake Netflix login page.
 
 ---
-![](616945d482ef350052080da1-1774327001766.svg)
+![](616945d482ef350052080da1-1774156168798.png)
 ## Phishing Techniques Used
 
 - **Spoofed Email Address** – The display name impersonates Netflix Billing while the actual sender originates from an unrelated domain.
@@ -317,7 +317,7 @@ Credential Harvesting
 This technique may bypass basic email filtering systems because the malicious URL is not immediately visible within the email body.
 
 ---
-
+![](616945d482ef350052080da1-1774327001766.svg)
 ## Indicators of Phishing
 
 - Suspicious sender address
