@@ -103,8 +103,6 @@ without exposing themselves to unnecessary risk.
 
 The second phishing sample imitates a shipping notification to create urgency and trick the recipient into clicking a malicious tracking link. Unlike the previous example, this campaign also uses **tracking pixels** to notify the attacker when the email has been opened.
 
-![Track Your Package](Track%20Your%20Package.png)
-
 ## Phishing Techniques Used
 
 - **Spoofed Email Address:** Pretending to be a trusted distribution center.
