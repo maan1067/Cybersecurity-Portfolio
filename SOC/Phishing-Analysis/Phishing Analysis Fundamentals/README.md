@@ -111,7 +111,7 @@ Headers are one of the most important parts of every phishing investigation.
 
 ## Viewing the Message Source
 
-![Viewing the Message Source](Viewing%20the%20Message%20Source.png)
+![Viewing the Message Source](616945d482ef350052080da1-1773834260371.svg)
 
 Instead of viewing only the rendered email, analysts inspect the raw source.
 
