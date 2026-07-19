@@ -194,7 +194,7 @@ This allows attachments to be safely reconstructed and analyzed.
 
 ## Types of Phishing
 
-![Anatomy of a Phishing Email](Anatomy%20of%20a%20Phishing%20Email.png)
+![Anatomy of a Phishing Email](616945d482ef350052080da1-1773835391457.svg)
 
 Common phishing attacks include:
 
