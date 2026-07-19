@@ -157,8 +157,85 @@ This explains why many email providers block remote images by default.
 ### Analyst Takeaway
 
 When analyzing phishing emails:
-
+**Interactive Analysis:**  
+https://app.any.run/tasks/12dcbc54-be0f-4250-b6c1-94d548816e5c/
 - Never trust hyperlinks based only on their displayed text.
 - Inspect the raw email source whenever possible.
 - Be cautious with externally loaded images because they may be tracking pixels.
 - Keep automatic image loading disabled while performing email analysis.
+# Download Document Here
+
+In this task, we analyze a phishing campaign that uses a **multi-stage redirection chain** to harvest user credentials. Instead of directing the victim to a malicious website immediately, the attacker leverages trusted services such as **Microsoft OneDrive** and **Adobe** to create the illusion of legitimacy before finally presenting a fake login portal.
+
+This layered approach helps bypass basic email filtering solutions and increases the likelihood that victims will trust the phishing campaign.
+
+## Phishing Techniques Used
+
+- **Artificial Urgency:** Creating a limited time window to pressure the victim into acting immediately.
+- **Brand Impersonation:** Using well-known brands such as Microsoft, Adobe, and OneDrive to establish credibility.
+- **Link Redirection:** Hiding the final phishing website behind multiple redirects.
+- **Credential Harvesting:** Collecting usernames and passwords through a fake authentication portal.
+
+---
+
+## First Observations
+
+At first glance, several indicators reveal suspicious behavior:
+
+- **Send Date:** The email was sent on **Thursday, July 15th, 2021**.
+- **Expiration Date:** The document supposedly expires on the same day, creating urgency.
+- **Download Document Here Button:** Encourages the victim to immediately access the document.
+
+### Red Flags
+
+- Artificial urgency designed to pressure the recipient.
+- Unexpected fax notification.
+- Action button requesting immediate interaction.
+- Trusted branding used to lower suspicion.
+
+---
+
+## Download Document Here
+
+Clicking the **Download Document Here** button does not immediately deliver a document.
+
+Instead, the victim experiences a **multi-stage redirection chain**:
+
+1. Redirected to a fake **Microsoft OneDrive** sharing page.
+2. Clicking **Get Document** redirects again to a fake **Adobe** page.
+3. Finally, the victim reaches a fraudulent login portal requesting email credentials.
+
+This technique makes the phishing campaign appear more convincing because each page imitates a legitimate service.
+
+### Additional Red Flags
+
+- Suspicious and unrelated URLs.
+- Poor or illogical instructions.
+- Multiple redirects before reaching the final page.
+- Fake branding copied from legitimate companies.
+
+---
+
+## Logging In
+
+The final phishing page asks the victim to authenticate using their email provider, such as **Outlook**.
+
+Even if valid credentials are entered, authentication never actually occurs.
+
+Instead:
+
+- Username and password are transmitted directly to the attacker's server.
+- The victim receives a generic error message.
+- The attacker silently captures the credentials without providing access to any document.
+
+This is a classic example of **Credential Harvesting**.
+
+### Analyst Takeaway
+
+When investigating phishing campaigns:
+
+- Be suspicious of emails creating unnecessary urgency.
+- Verify hyperlinks before clicking them.
+- Watch for multiple redirections between trusted brands.
+- Always inspect the destination URL rather than relying on page appearance.
+- Remember that modern phishing pages can be grammatically correct and visually identical to legitimate websites, especially with the assistance of AI.
