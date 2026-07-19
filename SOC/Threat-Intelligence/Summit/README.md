@@ -86,7 +86,7 @@ Because of this weakness, hashes sit at the **bottom of the Pyramid of Pain**.
 - MD5 Hash
 - IOC Detection
 - Static Detection
-
+![Manage Hashes](Manage hashes window.png)
 # Sample 2 — IP Address Detection
 
 Sphinx recompiles the malware, generating a completely different hash.
