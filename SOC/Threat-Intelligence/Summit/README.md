@@ -195,4 +195,75 @@ Blocking domains is more effective than blocking IP addresses because attackers 
 
 - DNS filtering prevents malware from communicating with its Command & Control server.
 - Domain-based detection is more resilient than IP-based detection.
-- Security solutions frequently use DNS filtering to stop malware, phishing campaigns, and malicious websites before communication occurs.
+- Security solutions frequently use DNS filtering to stop malware, phishing campaigns, and malicious websites before communication occurs. 
+# Sample 4 — Host Artifact Detection (Sigma Rule)
+
+![Sample4 Results](Sample4.exe%20results.png)
+
+The attacker explains that changing hashes, IP addresses, and domains is relatively easy. This time, the malware avoids relying on those indicators and instead leaves artifacts on the victim's system.
+
+The Malware Sandbox report shows that the malware modifies the Windows Registry in an attempt to disable Microsoft Defender's real-time protection.
+
+**Registry Key:**
+
+```text
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection
+```
+
+**Registry Value:**
+
+```text
+DisableRealtimeMonitoring
+```
+
+This registry modification is a strong host-based artifact because it represents malicious behavior rather than a simple network indicator.
+
+---
+
+## Creating the Sigma Rule
+
+![Creating a Sigma Rule](Creating%20a%20Sigma%20Rule.png)
+
+Open the **Sigma Rule Builder** and select:
+
+```
+Sysmon Event Logs
+→ Registry Modifications
+```
+
+Configure the Sigma rule using the registry information collected from the Malware Sandbox.
+
+| Field | Value |
+|-------|-------|
+| Registry Key | `HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows Defender\Real-Time Protection` |
+| Registry Value | `DisableRealtimeMonitoring` |
+| ATT&CK Tactic | Defense Evasion (TA0005) |
+
+The Sigma rule detects any attempt to modify Windows Defender settings and immediately identifies malicious activity.
+
+---
+
+## Detection Method
+
+- **IOC Type:** Host Artifact (Registry Modification)
+- **Pyramid of Pain Level:** Host Artifacts
+- **Detection Confidence:** Very High
+- **Attacker Cost:** High
+
+Unlike hashes or IP addresses, host artifacts are much harder for attackers to change because they are tied to how the malware behaves on the victim's system.
+
+---
+
+## Why This Detection Is Stronger
+
+Rather than detecting the malware itself, this rule detects the malicious action performed by the malware.
+
+Even if the attacker recompiles the malware or changes the infrastructure, attempting to disable Windows Defender will still trigger the detection rule.
+
+---
+
+## Key Takeaways
+
+- Registry modifications are valuable host-based indicators.
+- Sigma rules allow defenders to detect attacker behavior instead of specific malware samples.
+- Detecting behavioral artifacts significantly increases the attacker's cost and moves defenders higher on the Pyramid of Pain.
