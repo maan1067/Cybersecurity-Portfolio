@@ -247,5 +247,132 @@ When investigating phishing campaigns:
 - Verify hyperlinks before clicking them.
 - Watch for multiple redirections between trusted brands.
 - Always inspect the destination URL rather than relying on page appearance.
-- Remember that modern phishing pages can be grammatically correct and visually identical to legitimate websites, especially with the assistance of AI.
+- Remember that modern phishing pages can be grammatically correct and visually identical to legitimate websites, especially with the assistance of AI. 
+
+# Your Account Is on Hold
+
+## Scenario Overview
+
+This phishing email impersonates **Netflix Billing** and attempts to trick recipients into believing that their account has been suspended due to a billing issue. Unlike previous phishing campaigns that relied on malicious hyperlinks, this attack delivers a **PDF attachment** containing an embedded phishing link.
+
+The objective is to convince the victim to open the attachment and submit their account credentials on a fake Netflix login page.
+
+---
+![](616945d482ef350052080da1-1774327001766.svg)
+## Phishing Techniques Used
+
+- **Spoofed Email Address** – The display name impersonates Netflix Billing while the actual sender originates from an unrelated domain.
+- **Sense of Urgency** – Claims that the user's account has been suspended and requires immediate action.
+- **Brand Impersonation** – Uses Netflix branding, logos, and HTML formatting to appear legitimate.
+- **Poor Grammar & Typos** – Contains spelling mistakes (e.g., *Netllx* instead of *Netflix*), indicating a fraudulent email.
+- **Malicious Attachment** – Delivers a PDF attachment instead of placing the phishing link directly inside the email.
+
+---
+
+## Initial Observations
+
+### Subject Line
+
+The email claims that the recipient's Netflix account has been suspended because of a billing problem.
+
+### Sender Analysis
+
+- Display Name: **Netflix Billing**
+- Actual Sender: Suspicious and unrelated email domain.
+
+**Red Flag:** The sender's display name does not match the actual email address.
+
+---
+
+## Email Body Analysis
+
+The email informs the recipient that there is an issue with their payment information and instructs them to open the attached PDF file to update their account.
+
+Instead of containing billing information, the PDF includes a button labeled:
+
+> **Update Payment Account**
+
+Clicking the button redirects the victim to a phishing website rather than an official Netflix page.
+
+---
+
+## Attachment Analysis
+
+Unlike previous phishing campaigns, the attacker hides the malicious URL inside a PDF attachment.
+
+Attack Flow:
+
+```text
+Email
+   ↓
+PDF Attachment
+   ↓
+Update Payment Button
+   ↓
+Fake Netflix Login Page
+   ↓
+Credential Harvesting
+```
+
+This technique may bypass basic email filtering systems because the malicious URL is not immediately visible within the email body.
+
+---
+
+## Indicators of Phishing
+
+- Suspicious sender address
+- Urgent request to update payment information
+- PDF attachment instead of a direct login page
+- Embedded hyperlink leading to a non-Netflix domain
+- Spelling and grammar mistakes
+- Fake Netflix branding
+- Unusual phone number formatting
+
+---
+
+## Indicators of Compromise (IOCs)
+
+| IOC Type | Description |
+|----------|-------------|
+| Display Name | Netflix Billing |
+| Attachment | PDF File |
+| Attack Type | Credential Harvesting |
+| Delivery Method | Embedded Link inside PDF |
+| Target | Netflix User Credentials |
+
+---
+
+## SOC Analyst Investigation
+
+During the investigation, a SOC analyst should:
+
+- Verify the sender's actual email address.
+- Inspect the PDF attachment safely.
+- Extract and analyze embedded URLs.
+- Validate URLs using VirusTotal or URL analysis platforms.
+- Analyze the attachment inside a sandbox such as ANY.RUN.
+- Identify and document all Indicators of Compromise (IOCs).
+
+---
+
+## Key Takeaways
+
+- Do not trust display names alone.
+- PDF attachments can contain hidden phishing links.
+- Always inspect embedded URLs before visiting them.
+- Brand logos and professional HTML formatting do not guarantee legitimacy.
+- Artificial urgency is one of the most common social engineering techniques.
+- Validate every suspicious attachment and hyperlink before interacting with them.
+
+---
+
+## Skills Practiced
+
+- Phishing Email Analysis
+- Attachment Analysis
+- Credential Harvesting Detection
+- Social Engineering Identification
+- IOC Identification
+- Email Investigation
+- Threat Analysis
 
