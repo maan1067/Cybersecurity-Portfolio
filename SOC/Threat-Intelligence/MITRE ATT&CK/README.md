@@ -1,6 +1,6 @@
 
 # MITRE ATT&CK Framework
-
+![MITRE ATT&CK](mitre-attack.png)
 ## Overview
 
 This room introduces the **MITRE ATT&CK Framework**, one of the most important knowledge bases used by SOC Analysts, Threat Hunters, Incident Responders, Red Teams, and Blue Teams.
