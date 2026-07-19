@@ -94,7 +94,7 @@ Sphinx recompiles the malware, generating a completely different hash.
 The previous rule is now useless.
 
 This time, the Malware Sandbox shows suspicious outbound network activity.
-
+![Sample2 Results](Sample2.exe%20results.png)
 
 Instead of detecting the file itself, we detect where the malware communicates.
 
