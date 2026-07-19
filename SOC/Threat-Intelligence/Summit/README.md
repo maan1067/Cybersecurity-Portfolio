@@ -267,3 +267,133 @@ Even if the attacker recompiles the malware or changes the infrastructure, attem
 - Registry modifications are valuable host-based indicators.
 - Sigma rules allow defenders to detect attacker behavior instead of specific malware samples.
 - Detecting behavioral artifacts significantly increases the attacker's cost and moves defenders higher on the Pyramid of Pain.
+
+# Sample 5 — Tool & Behavioral Detection
+
+![Attachment Viewer](Attachment%20Viewer.png)
+
+Unlike previous samples, the attacker moved most of the malicious logic to the backend infrastructure.
+
+Instead of relying on hashes, IP addresses, domains, or registry artifacts, the objective is to detect **abnormal network behavior**.
+
+The provided network logs revealed a suspicious outbound connection occurring every **1800 seconds (30 minutes)** with a constant payload size of **97 bytes**, which strongly resembles periodic Command & Control (C2) beaconing.
+
+---
+
+## Creating the Sigma Rule
+
+![Sigma Rule Building](Sigma%20Rule%20building%20again.png)
+
+Navigate to:
+
+```text
+Sysmon Event Logs
+→ Network Connections
+```
+
+Configure the Sigma rule using:
+
+| Field | Value |
+|-------|-------|
+| Remote IP | Any |
+| Remote Port | Any |
+| Connection Size | 97 Bytes |
+| Frequency | 1800 Seconds |
+| ATT&CK Tactic | Command and Control (TA0011) |
+
+Instead of detecting infrastructure, the rule detects repetitive beaconing behavior commonly used by malware communicating with a C2 server.
+
+---
+
+## Detection Method
+
+- **Detection Type:** Tool / Behavioral Detection
+- **Pyramid of Pain Level:** Tools
+- **ATT&CK Tactic:** Command and Control (TA0011)
+- **Attacker Cost:** Very High
+
+Behavior-based detections are significantly harder to bypass because attackers must redesign or replace their malware framework instead of simply changing infrastructure.
+
+---
+
+# Sample 6 — TTP Detection
+
+![Commands Log](Commands.log%20file.png)
+
+The final challenge focuses on the highest level of the Pyramid of Pain: **Tactics, Techniques, and Procedures (TTPs).**
+
+The attacker provided a command history showing repeated creation of an exfiltration log file named:
+
+```text
+exfiltr8.log
+```
+
+This behavior aligns with the MITRE ATT&CK technique:
+
+- **Automated Exfiltration (T1020)**
+
+Instead of detecting a specific malware sample, the objective is to detect the attacker's behavior.
+
+---
+
+## Final Sigma Rule
+
+![Final Sigma Rule](A%20final%20sigma%20rule%20created!.png)
+
+Create a Sigma rule using:
+
+```text
+Sysmon Event Logs
+→ File Creation and Modification
+```
+
+Configuration:
+
+| Field | Value |
+|-------|-------|
+| File Path | `%temp%` |
+| File Name | `exfiltr8.log` |
+| ATT&CK Tactic | Exfiltration (TA0010) |
+
+This rule detects the creation of the exfiltration file regardless of which malware created it.
+
+---
+
+## Detection Method
+
+- **Detection Type:** Tactics, Techniques & Procedures (TTPs)
+- **Pyramid of Pain Level:** TTPs
+- **ATT&CK Tactic:** Exfiltration (TA0010)
+- **Attacker Cost:** Maximum
+
+Detecting attacker behavior forces adversaries to redesign their tools, workflows, and operational procedures, making future attacks significantly more expensive and difficult.
+
+---
+
+# What I Learned
+
+During this lab, I gained hands-on experience applying the **Pyramid of Pain** through progressively stronger detection strategies.
+
+Key concepts covered:
+
+- Malware sandbox analysis
+- Hash-based detection
+- Firewall rule creation
+- DNS filtering
+- Registry artifact detection
+- Sigma rule development
+- Behavioral detection
+- MITRE ATT&CK mapping
+- Command & Control detection
+- Exfiltration detection
+- Detection Engineering fundamentals
+
+---
+
+# Conclusion
+
+The Summit room demonstrates how defenders can gradually increase the operational cost for attackers by moving from simple Indicators of Compromise (IOCs) toward behavioral detections.
+
+Rather than relying solely on hashes, IP addresses, or domains, modern detection engineering focuses on identifying attacker techniques, persistence mechanisms, and TTPs.
+
+This layered approach significantly strengthens an organization's security posture and aligns with modern Blue Team methodologies based on the **MITRE ATT&CK Framework** and the **Pyramid of Pain**.
