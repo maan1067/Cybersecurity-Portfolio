@@ -153,7 +153,7 @@ Attackers frequently abuse HTML formatting to disguise malicious links behind le
 
 ## Viewing HTML Source Code
 
-![Viewing HTML Source Code](Viewing%20HTML%20Source%20Code.png)
+![Viewing HTML Source Code](616945d482ef350052080da1-1773834817479.svg)
 
 Viewing the HTML source allows analysts to inspect the actual structure behind an email.
 
