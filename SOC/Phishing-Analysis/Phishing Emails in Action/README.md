@@ -55,7 +55,7 @@ These inconsistencies are enough to immediately classify the email as suspicious
 
 ## Email Body Analysis
 
-![Email Body Analysis](Email%20Body%20Analysis%20616945d482ef350052080da1-1774315608150.svg)
+![Email Body Analysis](616945d482ef350052080da1-1774315608150.svg)
 
 The email body is designed to closely resemble a legitimate PayPal purchase receipt.
 
