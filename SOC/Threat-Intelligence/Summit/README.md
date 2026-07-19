@@ -72,6 +72,7 @@ Hashes provide extremely accurate detection.
 
 If the file is identical, it will always produce the same hash.
 
+![Sample1 Results](Sample1.exe%20results.png)
 ### Weakness
 
 Changing even **one bit** inside the executable completely changes the hash.
