@@ -1,5 +1,7 @@
 # Phishing Emails in Action
 
+![Phishing Emails in Action](Phishing%20Emails%20in%20Action.png)
+
 ## Introduction
 
 In the first room of the **Phishing Analysis** module, **Phishing Analysis Fundamentals**, you learned how to investigate email headers and bodies to identify common red flags. Now, we transition to practice by examining real phishing email samples.
@@ -17,15 +19,13 @@ This room focuses on the tactics attackers use to mirror legitimate communicatio
 
 ### Prerequisites
 
-Complete **Phishing Analysis Fundamentals** for an overview of email communications and analysis.
+Check out **Phishing Analysis Fundamentals** for an overview of email communications and analysis.
 
 ---
 
 # Cancel Your Order
 
-In this task, we will examine a sample email designed to mimic an official transaction receipt from **PayPal**.
-
-By analyzing this phishing email, we will focus on how attackers leverage spoofed email addresses to impersonate trusted services and use URL shortening services to hide the true destination of malicious links.
+In this task, we will examine a sample email designed to mimic an official transaction receipt from **PayPal**. By analyzing this specific sample, we will focus on how attackers leverage spoofed email addresses to impersonate trusted services and the strategic use of URL shortening services to obfuscate the final destination of malicious links.
 
 ---
 
@@ -33,67 +33,68 @@ By analyzing this phishing email, we will focus on how attackers leverage spoofe
 
 The phishing email uses several social engineering techniques:
 
-- **Spoofed Email Address:** Mimicking a trusted service to gain immediate credibility.
-- **URL Shortening:** Using redirect services to hide the true destination of a malicious link.
-- **Branded HTML:** Impersonating PayPal branding to make the email appear legitimate.
+- **Spoofed Email Address** – Mimicking a trusted service to gain immediate credibility.
+- **URL Shortening** – Using redirection services to hide the true destination of a malicious link.
+- **Branded HTML** – Impersonating legitimate corporate imagery to create a sense of authenticity.
 
 ---
 
 ## First Observations
 
-Let's first examine the email header and identify immediate warning signs.
+![First Observations](First%20Observations.png)
 
-### Subject Line
+Let's first look at the sample email header and take a few notes on our immediate observations.
 
-The attacker uses a fake purchase confirmation to create urgency and pressure the victim into reacting quickly.
+- **Attention-grabbing Subject Line:** Uses a fake transaction to create urgency and pressure the victim into reacting quickly.
+- **From Address:** The sender appears as **service@paypal.com**, but the actual email originates from **gibberish@sultanbogor.com**, which is a major red flag.
+- **To Address:** The recipient email is unusual and does not resemble a normal Yahoo email account.
 
-### From Address
-
-Although the sender appears to be:
-
-```
-service@paypal.com
-```
-
-the actual email originates from:
-
-```
-gibberish@sultanbogor.com
-```
-
-This mismatch is an immediate indicator of sender spoofing.
-
-### To Address
-
-The recipient address is also unusual and does not resemble a normal Yahoo email account, adding another red flag.
+These inconsistencies are enough to immediately classify the email as suspicious before inspecting its contents.
 
 ---
 
 ## Email Body Analysis
 
-The email body is carefully designed to resemble a legitimate PayPal receipt.
+![Email Body Analysis](Email%20Body%20Analysis%20616945d482ef350052080da1-1774315608150.svg)
 
-It contains:
+The email body is designed to closely resemble a legitimate PayPal purchase receipt.
+
+It includes:
 
 - Purchase details
 - Gift card transaction information
-- PayPal branding
+- Official-looking PayPal branding
 - A **Cancel the Order** button
 
-No attachments are included, making the embedded button the primary attack vector.
+There are **no attachments** in this sample. Instead, the attacker relies entirely on convincing the victim to click the embedded button.
 
 ---
 
 ## Button Investigation
 
-Inspecting the raw email source reveals that the **Cancel the Order** button redirects to a shortened URL instead of directly pointing to its final destination.
+![Button Investigation](Button%20Investigation.png)
 
-Using a URL shortening service allows attackers to hide the malicious website from the victim.
+By inspecting the raw email source, we can investigate the hyperlink hidden behind the **Cancel the Order** button.
 
-Instead of clicking shortened links directly, security analysts should investigate them safely using services such as:
+Instead of linking directly to its final destination, the button points to a **shortened URL**. URL shortening services hide the real destination, making it difficult for users to determine whether a link is legitimate or malicious.
 
-- WhereGoes
-- URLScan
-- VirusTotal
+For this reason, security analysts should **never click shortened URLs directly** during an investigation.
 
-These tools reveal the final destination without exposing the analyst to the malicious website.
+---
+
+## Investigating Shortened URLs
+
+![WhereGoes](WhereGoes.png)
+
+Thankfully, several online tools allow analysts to safely inspect shortened URLs without visiting the destination website.
+
+One example is **WhereGoes**, which follows the redirect chain and reveals the final destination safely.
+
+Using tools like this helps analysts determine whether a link points to:
+
+- A legitimate website
+- A phishing page
+- A malware download
+- A credential harvesting portal
+
+without exposing themselves to unnecessary risk.
