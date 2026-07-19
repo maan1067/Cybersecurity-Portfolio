@@ -19,7 +19,7 @@ As a defender, your role involves analyzing email components to determine whethe
 ---
 
 ## The Email Address
-![Email Address](Email%20Address.png)
+![Email Address](Email-Address.png)
 
 Every email begins with a simple but structured address.
 
