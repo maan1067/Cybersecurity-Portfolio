@@ -1,5 +1,5 @@
 # Summit
-
+![Summit](Summit.png)
 ## Overview
 
 **Summit** is one of the best practical Blue Team labs on TryHackMe. Instead of only learning theory, this room places you in the role of a Detection Engineer working alongside a Purple Team engagement.
