@@ -53,7 +53,7 @@ The higher you climb, the more expensive the attack becomes for the adversary.
 ---
 
 # Sample 1 — Hash Detection
-
+![Sample 1 - First Email](Sample1.exe%20and%20first%20email.png)
 The first malware sample is extremely easy to detect.
 
 After submitting the executable to the Malware Sandbox, the report reveals multiple Indicators of Compromise (IOCs), including the file's unique **MD5 hash**.
