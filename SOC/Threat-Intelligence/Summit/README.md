@@ -57,7 +57,7 @@ The higher you climb, the more expensive the attack becomes for the adversary.
 The first malware sample is extremely easy to detect.
 
 After submitting the executable to the Malware Sandbox, the report reveals multiple Indicators of Compromise (IOCs), including the file's unique **MD5 hash**.
-
+![Malware Sandbox](Malware%20Sandbox.png)
 The solution is straightforward:
 
 - Open **Manage Hashes**
