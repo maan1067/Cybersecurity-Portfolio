@@ -529,3 +529,222 @@ During the investigation, a SOC analyst should:
 - IOC Identification
 - Social Engineering Detection
 - SOC Investigation
+
+# Scheduled Shipment
+
+## Scenario Overview
+
+This phishing email impersonates **DHL Express** and attempts to trick recipients into opening a malicious **Microsoft Excel (.xlsx)** attachment. Unlike phishing campaigns that focus on credential harvesting, this attack aims to **execute malicious code** on the victim's system by delivering an executable payload.
+
+The campaign relies on trusted branding, email spoofing, and a weaponized Excel document to initiate malware execution.
+
+---
+
+## Phishing Techniques Used
+
+- **Spoofed Email Address** – The display name is set to **DHL Express**, while the actual sender belongs to an unrelated domain.
+- **Brand Impersonation** – Uses DHL logos and HTML formatting to mimic legitimate shipping notifications.
+- **Malicious Attachment** – Delivers a weaponized **Microsoft Excel (.xlsx)** document.
+- **Executable Payload Delivery** – The Excel document contains a hyperlink that downloads and executes malware.
+
+---
+
+## Initial Observations
+
+### Subject Line
+
+The email claims that DHL is preparing to ship a package and encourages the recipient to review the attached shipment details.
+
+### Sender Analysis
+
+- Display Name: **DHL Express**
+- Actual Sender: Suspicious and unrelated email domain.
+
+**Red Flag:** The display name does not match the sender's actual email address.
+
+### Brand Impersonation
+
+The email uses official DHL branding, including logos, colors, and HTML formatting, to increase its credibility.
+
+---
+
+## Email Body Analysis
+
+The email body contains minimal information and primarily directs the recipient to open the attached Excel document.
+
+Unlike legitimate shipping notifications, there is very little shipment information included within the email itself.
+
+---
+
+## Attachment Analysis
+
+The attached **Microsoft Excel (.xlsx)** document contains several inconsistencies that immediately raise suspicion.
+
+### Geographic Inconsistencies
+
+- Sender uses a **German** domain.
+- Invoice references a city in **India**.
+- Document content contains **Mandarin** text.
+
+The combination of unrelated geographic locations is a strong indicator that the document is fraudulent.
+
+The spreadsheet contains a single embedded hyperlink designed to continue the attack.
+
+---
+
+## Malware Execution
+
+When the embedded hyperlink is clicked, it attempts to download and execute the following file:
+
+```text
+regasms.exe
+```
+
+Although execution fails in the analysis environment and generates a system error, the attacker's objective is clear: execute malicious code on the victim's machine.
+
+Attack Flow:
+
+```text
+Email
+      ↓
+Excel Attachment (.xlsx)
+      ↓
+Embedded Hyperlink
+      ↓
+Download regasms.exe
+      ↓
+Malware Execution
+```
+
+---
+
+## Potential Impact
+
+If the malware executes successfully, the attacker may:
+
+### Establish Persistence
+
+Maintain long-term access by creating:
+
+- Registry Run Keys
+- Scheduled Tasks
+- Startup Entries
+- Backdoors
+
+---
+
+### Data Exfiltration
+
+Steal sensitive information such as:
+
+- Documents
+- Browser Passwords
+- Saved Credentials
+- Personal Files
+
+---
+
+### Ransomware Deployment
+
+Encrypt files on the victim's system and demand payment in exchange for the decryption key.
+
+---
+
+## Indicators of Phishing
+
+- Spoofed sender address
+- Fake DHL branding
+- Unexpected shipment notification
+- Suspicious Excel attachment
+- Embedded hyperlink inside the spreadsheet
+- Geographic inconsistencies
+- Malware download attempt
+- Executable payload delivery
+
+---
+
+## Indicators of Compromise (IOCs)
+
+| IOC Type | Description |
+|----------|-------------|
+| Display Name | DHL Express |
+| Attachment | Microsoft Excel (.xlsx) |
+| Payload | regasms.exe |
+| Delivery Method | Embedded Hyperlink |
+| Attack Type | Malware Delivery |
+
+---
+
+## SOC Analyst Investigation
+
+During the investigation, a SOC analyst should:
+
+- Verify the sender's actual email address.
+- Inspect the Excel attachment in a secure environment.
+- Extract embedded hyperlinks.
+- Identify downloaded payloads.
+- Analyze the executable using a malware sandbox.
+- Collect Indicators of Compromise (IOCs).
+- Determine the malware's capabilities and document findings.
+
+---
+
+## Key Takeaways
+
+- Trusted company branding does not guarantee legitimacy.
+- Excel attachments can be weaponized to deliver malware.
+- Geographic inconsistencies often indicate phishing attempts.
+- Unexpected shipment notifications should always be verified.
+- Analyze suspicious attachments inside an isolated sandbox before opening them.
+- Malware delivery phishing campaigns often transition from documents to executable payloads.
+
+---
+
+## Skills Practiced
+
+- Phishing Email Analysis
+- Attachment Analysis
+- Malware Delivery Detection
+- Microsoft Office Threat Analysis
+- IOC Identification
+- Email Header Analysis
+- Social Engineering Detection
+- SOC Investigation
+
+# Conclusion
+
+This room provided hands-on experience in analyzing real-world phishing emails and identifying common phishing techniques used by attackers. Throughout the exercises, I investigated multiple phishing scenarios involving credential harvesting, malicious attachments, spoofed email addresses, URL manipulation, tracking pixels, and malware delivery.
+
+By examining email headers, sender information, hyperlinks, attachments, and social engineering tactics, I strengthened my ability to recognize phishing campaigns and perform effective email investigations from a SOC Analyst perspective.
+
+---
+
+## Skills Developed
+
+- Phishing Email Analysis
+- Email Header Investigation
+- Social Engineering Detection
+- Attachment Analysis
+- Credential Harvesting Detection
+- Malware Delivery Analysis
+- URL & Domain Investigation
+- IOC Identification
+- Threat Intelligence
+- SOC Alert Investigation
+
+---
+
+## Key Takeaways
+
+- Always verify the sender's actual email address rather than relying on the display name.
+- Be cautious of emails creating unnecessary urgency or requesting immediate action.
+- Never trust shortened or embedded links without verification.
+- Analyze suspicious attachments in a secure sandbox environment.
+- Collect and document Indicators of Compromise (IOCs) during every investigation.
+- Modern phishing campaigns often combine trusted branding with sophisticated social engineering techniques.
+
+---
+
+## Overall Outcome
+
+Completing this room improved my practical phishing analysis skills and reinforced the importance of carefully inspecting emails before interacting with links or attachments. These techniques are essential for Security Operations Center (SOC) analysts responsible for detecting, investigating, and responding to phishing incidents.
