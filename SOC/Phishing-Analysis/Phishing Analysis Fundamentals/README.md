@@ -49,7 +49,7 @@ Together they allow mail servers to deliver emails to the correct recipient.
 
 ## Email Delivery
 
-![Email Delivery](Email%20Delivery.png)
+![Email Delivery](616945d482ef350052080da1-1773833730648.svg)
 
 Three main protocols are responsible for email communication:
 
