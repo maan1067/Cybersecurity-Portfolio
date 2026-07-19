@@ -108,7 +108,7 @@ Using the **Firewall Rule Manager**, create:
 | Action | Deny |
 
 Blocking outbound traffic prevents the malware from reaching its Command & Control (C2) server.
-
+![Firewall Rule Manager](Firewall%20Rule%20Manager.png)
 ### Why Egress?
 
 Ingress = Traffic entering the network.
