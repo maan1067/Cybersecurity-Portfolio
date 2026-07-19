@@ -376,3 +376,156 @@ During the investigation, a SOC analyst should:
 - Email Investigation
 - Threat Analysis
 
+# Your Recent Purchase
+
+## Scenario Overview
+
+This phishing email impersonates **Apple Support** and attempts to convince recipients that an unauthorized purchase has been made on their account. Unlike previous phishing campaigns, this email contains **no message body** and instead relies entirely on a malicious attachment to lure victims.
+
+The attacker combines **email spoofing**, **BCC abuse**, **artificial urgency**, and a **Microsoft Word Template (.dot)** attachment to bypass suspicion and trick users into interacting with a phishing website.
+
+---
+
+## Phishing Techniques Used
+
+- **Spoofed Email Address** – The display name is set to **Apple Support**, while the actual sender belongs to an unrelated domain.
+- **Blind Carbon Copy (BCC)** – The recipient is hidden using BCC, preventing users from seeing who else received the email.
+- **Artificial Urgency** – The subject line claims an unauthorized purchase has occurred and requires immediate action.
+- **Poor Grammar & Typos** – Several spelling mistakes appear within the email headers.
+- **Malicious Attachment** – The email contains a **.dot (Microsoft Word Template)** attachment instead of a normal invoice or receipt.
+
+More information about **.dot** files:
+
+https://www.reviversoft.com/en/file-extensions/dot
+
+---
+
+## Initial Observations
+
+### Subject Line
+
+The subject informs the recipient that an unauthorized purchase has occurred and immediate action is required.
+
+This creates a strong sense of urgency designed to pressure the victim into opening the attachment.
+
+### Sender Analysis
+
+- Display Name: **Apple Support**
+- Actual Sender: Suspicious and unrelated domain
+
+**Red Flag:** The sender's display name does not match the actual email address.
+
+### Blind Carbon Copy (BCC)
+
+The email was sent using **Blind Carbon Copy (BCC)**, meaning the recipient was not directly addressed.
+
+Attackers often use BCC to send phishing emails to multiple victims while hiding the recipient list.
+
+More information about BCC:
+
+https://services.pitt.edu/TDClient/33/Portal/KB/Article/2057/Using-the-Blind-Carbon-Copy-BCC-Feature-in-Email
+
+---
+
+## Email Body Analysis
+
+One of the biggest red flags is that the email body is **completely blank**.
+
+Instead of including instructions or purchase information, the attacker relies entirely on a malicious attachment.
+
+Receiving a blank email with only an attachment should immediately raise suspicion.
+
+---
+
+## Attachment Analysis
+
+The attachment is a **Microsoft Word Template (.dot)** file.
+
+When the victim opens the document and interacts with the large embedded image, they are redirected to a phishing website.
+
+Although the URL contains familiar keywords such as:
+
+- apps
+- ios
+- apple
+
+these terms are used only to make the link appear legitimate.
+
+The URL itself is excessively long and complex, which is a common indicator of malicious redirection.
+
+Attack Flow:
+
+```text
+Email
+    ↓
+DOT Attachment
+    ↓
+Embedded Image
+    ↓
+Phishing Website
+    ↓
+Credential Harvesting
+```
+
+---
+
+## Indicators of Phishing
+
+- Spoofed sender address
+- Hidden recipients using BCC
+- Blank email body
+- Suspicious .dot attachment
+- Artificial urgency
+- Poor grammar and spelling mistakes
+- Long and suspicious URL
+- Fake Apple branding
+
+---
+
+## Indicators of Compromise (IOCs)
+
+| IOC Type | Description |
+|----------|-------------|
+| Display Name | Apple Support |
+| Attachment | .dot (Microsoft Word Template) |
+| Delivery Method | Malicious Attachment |
+| Attack Type | Credential Harvesting |
+| Social Engineering | Unauthorized Purchase Notification |
+
+---
+
+## SOC Analyst Investigation
+
+During the investigation, a SOC analyst should:
+
+- Verify the sender's actual email address.
+- Check whether the email was delivered using BCC.
+- Analyze the .dot attachment in a secure sandbox.
+- Extract embedded hyperlinks from the document.
+- Validate URLs using VirusTotal or URL analysis platforms.
+- Collect all Indicators of Compromise (IOCs).
+- Document the phishing techniques used in the campaign.
+
+---
+
+## Key Takeaways
+
+- Blank emails containing only attachments are highly suspicious.
+- Display names should never be trusted without verifying the sender's address.
+- BCC is commonly abused in phishing campaigns.
+- Microsoft Office template files (.dot) can be weaponized.
+- Long URLs containing trusted keywords do not guarantee legitimacy.
+- Always analyze suspicious attachments inside a sandbox before opening them.
+
+---
+
+## Skills Practiced
+
+- Phishing Email Analysis
+- Attachment Analysis
+- Microsoft Office Malware Awareness
+- Credential Harvesting Detection
+- Email Header Analysis
+- IOC Identification
+- Social Engineering Detection
+- SOC Investigation
