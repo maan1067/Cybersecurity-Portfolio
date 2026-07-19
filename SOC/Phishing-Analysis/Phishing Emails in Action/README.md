@@ -377,7 +377,7 @@ During the investigation, a SOC analyst should:
 - Threat Analysis
 
 # Your Recent Purchase
-
+![](First%20Observations4.png)
 ## Scenario Overview
 
 This phishing email impersonates **Apple Support** and attempts to convince recipients that an unauthorized purchase has been made on their account. Unlike previous phishing campaigns, this email contains **no message body** and instead relies entirely on a malicious attachment to lure victims.
