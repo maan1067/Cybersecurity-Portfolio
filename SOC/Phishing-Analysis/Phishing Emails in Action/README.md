@@ -155,19 +155,22 @@ This explains why many email providers block remote images by default.
 - Measure the success of phishing campaigns.
 
 ### Analyst Takeaway
-
-When analyzing phishing emails:
-**Interactive Analysis:**  
-https://app.any.run/tasks/12dcbc54-be0f-4250-b6c1-94d548816e5c/
-- Never trust hyperlinks based only on their displayed text.
-- Inspect the raw email source whenever possible.
-- Be cautious with externally loaded images because they may be tracking pixels.
-- Keep automatic image loading disabled while performing email analysis.
 # Download Document Here
 
 In this task, we analyze a phishing campaign that uses a **multi-stage redirection chain** to harvest user credentials. Instead of directing the victim to a malicious website immediately, the attacker leverages trusted services such as **Microsoft OneDrive** and **Adobe** to create the illusion of legitimacy before finally presenting a fake login portal.
 
 This layered approach helps bypass basic email filtering solutions and increases the likelihood that victims will trust the phishing campaign.
+
+## Analysis Environment
+
+The phishing campaign can be explored interactively using the **ANY.RUN Interactive Sandbox**:
+
+**Interactive Analysis:**  
+https://app.any.run/tasks/12dcbc54-be0f-4250-b6c1-94d548816e5c/
+
+This sandbox provides a complete behavioral analysis of the phishing campaign, including its execution flow, network activity, redirection chain, and indicators of compromise (IOCs).
+
+---
 
 ## Phishing Techniques Used
 
@@ -179,6 +182,8 @@ This layered approach helps bypass basic email filtering solutions and increases
 ---
 
 ## First Observations
+
+![First Observations](First%20Observations1.png)
 
 At first glance, several indicators reveal suspicious behavior:
 
@@ -196,6 +201,8 @@ At first glance, several indicators reveal suspicious behavior:
 ---
 
 ## Download Document Here
+
+![Download Document Here](Download%20Document%20Here1.svg)
 
 Clicking the **Download Document Here** button does not immediately deliver a document.
 
@@ -218,6 +225,8 @@ This technique makes the phishing campaign appear more convincing because each p
 
 ## Logging In
 
+![Logging In](Logging%20In.svg)
+
 The final phishing page asks the victim to authenticate using their email provider, such as **Outlook**.
 
 Even if valid credentials are entered, authentication never actually occurs.
@@ -239,3 +248,4 @@ When investigating phishing campaigns:
 - Watch for multiple redirections between trusted brands.
 - Always inspect the destination URL rather than relying on page appearance.
 - Remember that modern phishing pages can be grammatically correct and visually identical to legitimate websites, especially with the assistance of AI.
+
