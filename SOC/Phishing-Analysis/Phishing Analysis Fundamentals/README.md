@@ -130,7 +130,7 @@ This information is often hidden from normal users but essential during investig
 
 ## Email Body
 
-![Email Body](Email%20Body.png)
+![Email Body](616945d482ef350052080da1-1773834819452.svg)
 
 The email body contains the message delivered to the recipient.
 
