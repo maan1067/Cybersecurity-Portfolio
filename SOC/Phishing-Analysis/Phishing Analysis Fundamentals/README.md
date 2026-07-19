@@ -171,7 +171,7 @@ Comparing the rendered message with its HTML source often exposes phishing indic
 
 ## Reconstructing Attachments
 
-![Reconstructing Attachments](Reconstructing%20Attachments.png)
+![Reconstructing Attachments](616945d482ef350052080da1-1773834817401.svg)
 
 Attachments are stored inside emails using MIME encoding.
 
