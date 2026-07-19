@@ -19,7 +19,7 @@ As a defender, your role involves analyzing email components to determine whethe
 ---
 
 ## The Email Address
-![Email Address](616945d482ef350052080da1-1773844337743.svg)
+(616945d482ef350052080da1-1773844337743.svg)
 
 Every email begins with a simple but structured address.
 
