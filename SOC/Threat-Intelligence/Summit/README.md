@@ -145,3 +145,54 @@ After only two samples, we can already see why simple Indicators of Compromise e
 | IP Address | Blocks C2 | Easily changed by attackers |
 
 As defenders, we must continue moving **up the Pyramid of Pain**, forcing attackers to spend more time, money, and effort to bypass our defenses.
+# Sample 3 — Domain Detection
+
+![Sample3 Results](Sample3.exe%20results.png)
+
+After the firewall rule blocked the previous Command & Control (C2) IP address, the attacker changed the server's IP address and continued the attack.
+
+The Malware Sandbox analysis revealed that the malware communicates with a suspicious domain instead of relying on a fixed IP address.
+
+## Creating the DNS Rule
+
+![DNS Rule Manager](DNS%20Rule%20Manager.png)
+
+Open the **DNS Rule Manager** and create a new DNS rule using the following settings:
+
+| Setting | Value |
+|---------|-------|
+| Rule Name | Any Name |
+| Category | Malware |
+| Domain | emudyn.bresonicz.info |
+| Action | Deny |
+
+This rule blocks DNS resolution for the malicious domain, preventing infected systems from reaching the attacker's infrastructure.
+
+---
+
+## Active DNS Rules
+
+![Active Rules](Active%20rules%20overview.png)
+
+After creating the rule, it appears in the list of active DNS rules.
+
+From this point forward, any attempt to resolve the malicious domain will be denied before a network connection is established.
+
+---
+
+## Detection Method
+
+- **IOC Type:** Domain Name
+- **Pyramid of Pain Level:** Domain Names
+- **Detection Confidence:** High
+- **Attacker Cost:** Medium
+
+Blocking domains is more effective than blocking IP addresses because attackers must register new domains, update DNS records, and modify their infrastructure before continuing the attack.
+
+---
+
+## Key Takeaways
+
+- DNS filtering prevents malware from communicating with its Command & Control server.
+- Domain-based detection is more resilient than IP-based detection.
+- Security solutions frequently use DNS filtering to stop malware, phishing campaigns, and malicious websites before communication occurs.
