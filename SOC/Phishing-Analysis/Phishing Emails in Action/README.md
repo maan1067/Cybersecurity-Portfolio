@@ -438,7 +438,7 @@ Receiving a blank email with only an attachment should immediately raise suspici
 ---
 
 ## Attachment Analysis
-
+![](Analyzing%20the%20Attachment5.svg)
 The attachment is a **Microsoft Word Template (.dot)** file.
 
 When the victim opens the document and interacts with the large embedded image, they are redirected to a phishing website.
