@@ -16,7 +16,8 @@ In this lab, I learned how email works, how phishing attacks are delivered, and 
 - Learn the structure of an email address.
 - Understand SMTP, POP3, and IMAP.
 - Analyze email headers.
-- Investigate email bodies and HTML source.
+- Investigate email bodies.
+- Analyze HTML source code.
 - Analyze email attachments.
 - Identify different phishing techniques.
 - Detect Indicators of Compromise (IOCs).
@@ -24,14 +25,16 @@ In this lab, I learned how email works, how phishing attacks are delivered, and 
 
 ---
 
-## Email Address Anatomy
+# Email Address Anatomy
 
-*(ضع الصورة هنا)*
+![Email Address](Email%20Address.png)
 
-An email address consists of three primary components:
+Every email begins with an email address, and understanding its structure is essential when analyzing phishing emails.
+
+An email address consists of three main components:
 
 - **Username** – Identifies the recipient's mailbox.
-- **@ Symbol** – Separates the user from the destination domain.
+- **@ Symbol** – Separates the username from the destination domain.
 - **Domain Name** – Specifies the mail server responsible for receiving the message.
 
 Example:
@@ -46,129 +49,160 @@ john@example.com
 | @ | Separator |
 | example.com | Mail Domain |
 
+A spoofed domain such as **micr0soft.com** instead of **microsoft.com** is a common phishing indicator.
+
 ---
 
-## Email Delivery Process
+# Email Delivery
 
-*(ضع الصورة هنا)*
+![Email Delivery](Email%20Delivery.png)
 
-Emails travel through several protocols before reaching the recipient.
+Email communication relies on three primary protocols.
 
-### SMTP (Simple Mail Transfer Protocol)
+## SMTP (Simple Mail Transfer Protocol)
 
-Used for:
+Responsible for:
 
 - Sending emails
-- Relaying mail between servers
+- Relaying emails between mail servers
 
 ---
 
-### POP3 (Post Office Protocol)
+## POP3 (Post Office Protocol)
 
 Characteristics:
 
-- Downloads emails locally.
-- Usually removes emails from the server.
-- Best for one device.
+- Downloads emails to one device.
+- Emails are often removed from the server.
+- Best suited for a single device.
 
 ---
 
-### IMAP (Internet Message Access Protocol)
+## IMAP (Internet Message Access Protocol)
 
 Characteristics:
 
 - Synchronizes emails across multiple devices.
-- Messages remain stored on the server.
-- Ideal for modern email clients.
+- Keeps emails stored on the server.
+- Allows consistent access from different devices.
 
 ---
 
-## Email Delivery Workflow
+## Email Journey
 
-*(ضع الصورة هنا)*
+![Email Headers](Email%20Headers.png)
 
-1. Sender writes an email.
-2. SMTP sends it to the sender's mail server.
+The email delivery process follows these steps:
+
+1. User sends an email.
+2. SMTP transfers the message to the sender's mail server.
 3. DNS locates the recipient's mail server.
-4. The email is transferred across the Internet.
+4. The email is delivered across the Internet.
 5. The recipient retrieves it using POP3 or IMAP.
 
+Understanding this workflow helps analysts trace the origin of suspicious emails.
+
 ---
 
-## Email Body Analysis
+# Email Body Analysis
 
-*(ضع الصورة هنا)*
+![Email Body](Email%20Body.png)
 
-An email body may contain:
+The email body contains the visible content received by the user.
 
-- Plain text
-- HTML formatting
+Emails may be:
+
+- Plain Text
+- HTML
+- Rich formatted messages
+
+HTML emails can contain:
+
 - Images
 - Hyperlinks
-- Embedded objects
-- Attachments
+- Buttons
+- Embedded content
+- Tracking pixels
 
-HTML emails should always be inspected carefully because malicious content may be hidden behind legitimate-looking text.
+Attackers frequently abuse HTML formatting to disguise malicious content.
 
 ---
 
-## Viewing HTML Source
+# Viewing HTML Source
 
-*(ضع الصورة هنا)*
+![Viewing HTML Source Code](Viewing%20HTML%20Source%20Code.png)
 
-Instead of only viewing the rendered email, analysts should inspect the raw HTML source to identify:
+Email clients display the rendered version of an email, but analysts should always inspect the raw HTML source.
+
+Viewing the HTML source helps identify:
 
 - Hidden hyperlinks
 - Embedded images
-- JavaScript (if present)
-- Tracking pixels
-- Obfuscated HTML
-
-Analyzing the source code often reveals malicious elements that are invisible to the user.
+- Suspicious HTML tags
+- Obfuscated code
+- Tracking elements
 
 ---
 
-## Attachment Analysis
+## Viewing the Message Source
 
-*(ضع الصورة هنا)*
+![Viewing the Message Source](Viewing%20the%20Message%20Source.png)
 
-Email attachments are commonly used to deliver malware.
+Viewing the complete message source provides access to:
 
-Important headers include:
+- Email Headers
+- MIME structure
+- HTML source
+- Attachments
+- Content encoding
 
-| Header | Purpose |
-|---------|----------|
+This information is invaluable during phishing investigations.
+
+---
+
+# Attachment Analysis
+
+![Reconstructing Attachments](Reconstructing%20Attachments.png)
+
+Attachments are one of the most common malware delivery methods.
+
+Important attachment headers include:
+
+| Header | Description |
+|---------|-------------|
 | Content-Type | File type |
 | Content-Disposition | Attachment name |
-| Content-Transfer-Encoding | Encoding format |
+| Content-Transfer-Encoding | Encoding method |
 
-Most attachments are encoded using **Base64**, allowing analysts to reconstruct and inspect the original file using tools such as:
+Most attachments are Base64 encoded and can be reconstructed using tools such as:
 
 - CyberChef
 - Base64 Decoders
 - Malware Sandboxes
 
+Always analyze attachments inside a secure environment.
+
 ---
 
 # Types of Phishing
 
-*(ضع الصورة هنا)*
+Attackers use several phishing techniques depending on their target.
 
 ## Spam
 
-Bulk unsolicited emails sent to many recipients.
+Mass unsolicited emails.
 
 ---
 
 ## Phishing
 
-Attempts to impersonate trusted organizations and steal sensitive information.
+Attempts to steal sensitive information by impersonating trusted organizations.
 
 ---
 
 ## Spear Phishing
 
-Highly targeted phishing directed at a specific person or organization.
+Highly targeted phishing against specific individuals or organizations.
 
 ---
 
@@ -180,105 +214,109 @@ Targets executives such as:
 - CFO
 - Directors
 
-Usually focuses on financial fraud.
+Usually intended for financial fraud.
 
 ---
 
 ## Smishing
 
-Phishing delivered through SMS messages.
+Phishing delivered via SMS messages.
 
 ---
 
 ## Vishing
 
-Voice-based phishing using phone calls.
+Voice-based phishing using telephone calls.
 
 ---
 
 # Anatomy of a Phishing Email
 
-*(ضع الصورة هنا)*
+![Anatomy of a Phishing Email](Anatomy%20of%20a%20Phishing%20Email.png)
 
-Common phishing indicators include:
+Common phishing characteristics include:
 
 - Spoofed sender address
-- Urgent language
-- Fake branding
-- Grammar mistakes
+- Urgent subject lines
+- Brand impersonation
 - Generic greetings
-- Hidden hyperlinks
+- Grammar or spelling mistakes
+- Hidden or shortened URLs
 - Malicious attachments
 
-These characteristics should always be investigated before interacting with the email.
+SOC analysts should verify each of these indicators before determining whether an email is malicious.
 
 ---
 
-## Safe Email Analysis
+# Safe Email Analysis
 
 Never click suspicious links directly.
 
 Instead, **Defang** them.
 
-Example:
-
-Original
+Original URL
 
 ```
-http://malicious.com
+http://malicious-domain.com
 ```
 
-Defanged
+Defanged URL
 
 ```
-hxxp[://]malicious[.]com
+hxxp[://]malicious-domain[.]com
 ```
 
-Defanging prevents accidental execution while allowing safe investigation.
+Defanging prevents accidental interaction with malicious websites while allowing analysts to safely share indicators.
 
 ---
 
-## Investigation Checklist
+# Investigation Checklist
 
-When analyzing a suspicious email, verify:
+During every phishing investigation, verify:
 
 - Sender address
 - Reply-To address
+- Return-Path
 - Subject line
 - Email headers
-- Authentication results (SPF, DKIM, DMARC)
+- SPF
+- DKIM
+- DMARC
 - URLs
 - Attachments
-- Writing style
+- HTML source
 - Indicators of Compromise (IOCs)
 
 ---
 
-## Skills Gained
+# Skills Gained
 
 - Email Analysis
-- Header Analysis
-- HTML Inspection
+- Email Header Analysis
+- HTML Source Inspection
 - Attachment Analysis
 - IOC Identification
-- Social Engineering Detection
+- Phishing Investigation
 - Threat Hunting
 - Incident Response
-- Phishing Investigation
+- Social Engineering Detection
 
 ---
 
-## Key Takeaways
+# Key Takeaways
 
 - Email headers reveal the true origin of a message.
-- HTML emails may hide malicious links.
-- Attachments should always be analyzed before opening.
-- Multiple phishing techniques target different victims.
-- Defanging URLs prevents accidental interaction with malicious content.
-- Proper email analysis helps prevent credential theft, malware infections, and unauthorized access.
+- SMTP, POP3, and IMAP each serve different roles in email communication.
+- HTML emails may hide malicious content.
+- Attachments should always be analyzed safely.
+- Defanging protects analysts from accidental interaction.
+- Phishing emails often rely on urgency, impersonation, and social engineering rather than technical exploits.
+- Proper email analysis significantly reduces the risk of credential theft and malware infections.
 
 ---
 
-## Conclusion
+# Conclusion
 
-Phishing remains one of the primary initial access vectors used by attackers. Understanding email delivery, analyzing headers, inspecting HTML content, and recognizing phishing indicators are essential skills for SOC Analysts, Incident Responders, and Threat Hunters. These techniques help security teams quickly identify malicious emails, protect users, and strengthen organizational defenses against social engineering attacks.
+Phishing remains one of the most effective initial access techniques used by attackers. Understanding how email works, analyzing headers, inspecting HTML content, examining attachments, and recognizing phishing indicators are fundamental skills for SOC Analysts, Incident Responders, and Threat Hunters.
+
+By mastering these techniques, defenders can quickly identify malicious emails, protect users, and strengthen an organization's overall security posture against social engineering attacks.
