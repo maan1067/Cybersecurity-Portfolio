@@ -356,13 +356,7 @@ To gather additional threat intelligence, the extracted executable was uploaded 
 The **Relations** section was reviewed to inspect the domains contacted during execution. Most observed domains belonged to legitimate Microsoft and Sectigo infrastructure used for certificate validation. However, one external domain was identified as the malware's Command-and-Control (C2) server based on the threat intelligence report.
 
 ### Evidence
-
-*(Add screenshot here)*
-
-```text
-images/
-└── q10-contacted-domains.png
-```
+![](Screenshot%202026-07-20%2023466648.png)
 
 ### Answer
 
