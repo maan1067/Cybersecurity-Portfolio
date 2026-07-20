@@ -259,9 +259,7 @@ The investigation showed that the malicious executable was launched by **w3wp.ex
 The same process also established the outbound reverse shell connection to the attacker's listener.
 
 ### Evidence
-
-*(Add screenshot here)*
-
+![](Screenshot%202026-07-20%20191419.png)
 ```
 images/
 ├── q8-netscan.png
