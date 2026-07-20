@@ -152,3 +152,171 @@ Port **4443** was used as the reverse shell listener.
 - IOC Identification
 - Attack Timeline Reconstruction
 - MITRE ATT&CK Mapping
+
+# Memory Dump Analysis
+
+## Overview
+
+This section focuses on the **Memory Forensics** phase of the investigation.
+
+After identifying the attacker’s activity through network traffic analysis, the investigation moved to analyzing a captured Windows memory dump using **Volatility 3**. The objective was to identify malicious processes, discover persistence mechanisms, inspect network connections, and answer the investigation questions.
+
+---
+
+## Tools Used
+
+- Volatility 3
+- Windows Command Prompt
+- FTK Imager (Memory Acquisition)
+- GitHub
+
+---
+
+# Q6 - Kernel Base Address
+
+### Question
+
+> Your memory snapshot captures the system’s kernel in situ, providing vital context for the breach.
+> What is the kernel base address in the dump?
+
+### Method
+
+The Windows kernel information was extracted using the following Volatility plugin:
+
+```powershell
+.\vol.exe -f C:\Intel\memdump.mem windows.info
+```
+
+The plugin returns detailed operating system information including:
+
+- Windows Version
+- Architecture
+- Kernel Base Address
+- DTB
+- Build Number
+
+### Evidence
+
+*(Add screenshot here)*
+
+```
+images/
+└── q6-kernel-base.png
+```
+
+### Answer
+
+```
+<Kernel Base Address>
+```
+
+---
+
+# Q7 - Persistence Executable
+
+### Question
+
+> A trusted service launches an unfamiliar executable residing outside the usual IIS stack, signalling a persistence implant.
+> What is the final full on-disk path of that executable?
+
+### Method
+
+The running process tree was enumerated using:
+
+```powershell
+.\vol.exe -f C:\Intel\memdump.mem windows.pstree
+```
+
+While reviewing the process hierarchy, an unusual executable was discovered.
+
+Process relationship:
+
+```
+services.exe
+    └── svchost.exe
+            └── w3wp.exe
+                    └── updatenow.exe
+```
+
+Unlike legitimate IIS binaries, the executable was located inside the Windows Startup folder.
+
+### Evidence
+
+*(Add screenshot here)*
+
+```
+images/
+└── q7-process-tree.png
+```
+
+### Answer
+
+```text
+C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\updatenow.exe
+```
+
+---
+
+# Q8 - Reverse Shell Parent Process
+
+### Question
+
+> The reverse shell’s outbound traffic is handled by a built-in Windows process that also spawns the implanted executable.
+> What is the name of this process, and what PID does it run under?
+
+### Method
+
+Network connections were inspected using:
+
+```powershell
+.\vol.exe -f C:\Intel\memdump.mem windows.netscan
+```
+
+The process tree from **windows.pstree** was then correlated with the active network connections.
+
+The investigation showed that the malicious executable was launched by **w3wp.exe**, the IIS Worker Process.
+
+The same process also established the outbound reverse shell connection to the attacker's listener.
+
+### Evidence
+
+*(Add screenshot here)*
+
+```
+images/
+├── q8-netscan.png
+└── q8-process-tree.png
+```
+
+### Answer
+
+```
+Process : w3wp.exe
+
+PID : 4332
+```
+
+---
+
+# Summary
+
+The memory analysis revealed:
+
+- The Windows kernel base address.
+- A malicious persistence executable located in the Startup folder.
+- IIS Worker Process (`w3wp.exe`) spawning the implant.
+- Reverse shell communication originating from the IIS process.
+- Successful correlation between network forensics and memory forensics artifacts.
+
+---
+
+## Skills Demonstrated
+
+- Memory Forensics
+- Windows Process Analysis
+- Volatility 3
+- Process Tree Analysis
+- Network Connection Analysis
+- Reverse Shell Investigation
+- Incident Response
+- Digital Forensics
