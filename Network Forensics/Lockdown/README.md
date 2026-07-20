@@ -93,7 +93,7 @@ The file provided remote code execution through the IIS web server.
 ---
 
 ## 5. Reverse Shell
-
+![](Screenshot%202026-07-20%20175729.png)
 After the web shell was executed, the compromised server initiated an outbound connection back to the attacker.
 
 Reverse Shell Details
