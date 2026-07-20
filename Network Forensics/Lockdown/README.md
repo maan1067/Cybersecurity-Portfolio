@@ -333,12 +333,7 @@ The analysis identified the file as a Windows PE32 executable and confirmed that
 
 ### Evidence
 
-*(Add screenshot here)*
-
-```text
-images/
-└── q9-die-analysis.png
-```
+![](Screenshot%202026-070000-20%20201001.png)
 
 ### Answer
 
