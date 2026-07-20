@@ -38,7 +38,7 @@ Analyze the captured network traffic to identify:
 Using Wireshark Conversations and endpoint statistics, the host generating the reconnaissance traffic was identified.
 
 **Attacker IP**
-
+![](Screenshot%202026-07-20%20172605.png)
 ```
 10.0.2.4
 ```
