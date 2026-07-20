@@ -230,7 +230,7 @@ Unlike legitimate IIS binaries, the executable was located inside the Windows St
 ![](Screenshot%2020326-07-20%20190834.png)
 
 ### Answer
-
+![](Screenshot%202026-07-20%201590703.png)
 ```text
 C:\ProgramData\Microsoft\Windows\Start Menu\Programs\Startup\updatenow.exe
 ```
