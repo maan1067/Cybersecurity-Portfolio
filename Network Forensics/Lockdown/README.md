@@ -379,13 +379,7 @@ The extracted malware sample was searched using its file hash on **VirusTotal** 
 Although different security vendors classified the sample under several malware names, multiple reputable vendors—including **Microsoft** and **AliCloud**—identified the malware as **Agent Tesla**. Based on the threat intelligence associated with the sample hash, the malware was attributed to the **Agent Tesla Remote Access Trojan (RAT)** family.
 
 ### Evidence
-
-*(Add screenshot here)*
-
-```text
-images/
-└── q11-virustotal-family.png
-```
+![](Screenshot%202026-07-20%20233225.png)
 
 ### Answer
 
