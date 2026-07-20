@@ -261,11 +261,6 @@ The same process also established the outbound reverse shell connection to the a
 ### Evidence
 ![](Screenshot%202026-07-20%20191419.png)
 ```
-images/
-├── q8-netscan.png
-└── q8-process-tree.png
-```
-
 ### Answer
 
 ```
