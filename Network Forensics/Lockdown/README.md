@@ -293,3 +293,195 @@ The memory analysis revealed:
 - Reverse Shell Investigation
 - Incident Response
 - Digital Forensics
+
+
+---
+
+# Malware Sample Analysis
+
+## Overview
+
+After identifying the persistence mechanism and extracting the malicious executable from the memory image, the investigation moved to the **Malware Analysis** phase.
+
+The extracted file, **updatenow.exe**, was examined using static analysis techniques to determine whether it was packed, identify its command-and-control (C2) infrastructure, and correlate its hash with publicly available threat intelligence.
+
+The objective of this phase was to answer the remaining investigation questions without executing the malware while collecting additional Indicators of Compromise (IOCs) and attributing the sample to a known malware family.
+
+---
+
+## Tools Used
+
+* Volatility 3
+* Detect It Easy (DIE)
+* VirusTotal
+* Windows CertUtil
+* Windows Command Prompt
+
+---
+
+# Q9 - Malware Packer
+
+### Question
+
+> Static inspection reveals the binary has been packed to hinder analysis. Which packer was used to obfuscate it?
+
+### Method
+
+After extracting **updatenow.exe** from the memory image using **Volatility 3**, the executable was analyzed with **Detect It Easy (DIE)**.
+
+The analysis identified the file as a Windows PE32 executable and confirmed that it had been packed using **UPX**. Packing is commonly used by malware authors to compress executables and make static analysis and reverse engineering more difficult.
+
+### Evidence
+
+*(Add screenshot here)*
+
+```text
+images/
+└── q9-die-analysis.png
+```
+
+### Answer
+
+```text
+UPX
+```
+
+---
+
+# Q10 - Command-and-Control Domain
+
+### Question
+
+> Threat-intel analysis shows the malware beaconing to its command-and-control host. Which fully qualified domain name (FQDN) does it contact?
+
+### Method
+
+To gather additional threat intelligence, the extracted executable was uploaded to **VirusTotal**.
+
+The **Relations** section was reviewed to inspect the domains contacted during execution. Most observed domains belonged to legitimate Microsoft and Sectigo infrastructure used for certificate validation. However, one external domain was identified as the malware's Command-and-Control (C2) server based on the threat intelligence report.
+
+### Evidence
+
+*(Add screenshot here)*
+
+```text
+images/
+└── q10-contacted-domains.png
+```
+
+### Answer
+
+```text
+cp8nl.hyperhost.ua
+```
+
+---
+
+# Q11 - Malware Family
+
+### Question
+
+> Open-source intel associates that hash with a well-known commodity RAT. To which malware family does the sample belong?
+
+### Method
+
+The extracted malware sample was searched using its file hash on **VirusTotal** to correlate it with publicly available threat intelligence.
+
+Although different security vendors classified the sample under several malware names, multiple reputable vendors—including **Microsoft** and **AliCloud**—identified the malware as **Agent Tesla**. Based on the threat intelligence associated with the sample hash, the malware was attributed to the **Agent Tesla Remote Access Trojan (RAT)** family.
+
+### Evidence
+
+*(Add screenshot here)*
+
+```text
+images/
+└── q11-virustotal-family.png
+```
+
+### Answer
+
+```text
+Agent Tesla
+```
+
+---
+
+# Summary
+
+The malware analysis revealed:
+
+* The extracted executable was packed using **UPX**.
+* Threat intelligence identified the malware's Command-and-Control (C2) domain.
+* The malware communicated with **cp8nl.hyperhost.ua**.
+* Public threat intelligence associated the sample with the **Agent Tesla Remote Access Trojan (RAT)** family.
+* Static malware analysis successfully complemented the network and memory forensic investigations.
+
+---
+
+## Skills Demonstrated
+
+* Malware Analysis
+* Static Analysis
+* Malware Extraction
+* Packer Identification
+* Threat Intelligence
+* VirusTotal Analysis
+* Malware Attribution
+* Digital Forensics
+* Incident Response
+
+---
+
+# Conclusion
+
+This investigation demonstrated a complete digital forensic workflow by combining **Network Forensics**, **Memory Forensics**, and **Malware Analysis** to reconstruct the attack and identify the adversary's activities.
+
+The investigation began with analyzing the captured network traffic, which revealed suspicious communications indicating that the system had been compromised. The evidence collected from the packet capture provided the initial indicators that guided the subsequent phases of the investigation.
+
+The next stage focused on **Memory Forensics**, where the captured Windows memory image was analyzed using **Volatility 3**. Process enumeration, process tree analysis, and network connection inspection revealed the malicious process responsible for establishing the reverse shell. Memory analysis also uncovered the persistence mechanism by identifying an implanted executable located within the Windows Startup folder. Correlating process execution with active network connections provided a clear understanding of the attacker's execution flow and persistence strategy.
+
+After identifying and extracting the malicious executable from memory, the investigation moved to the **Malware Analysis** phase. Static inspection confirmed that the executable had been packed using **UPX** to complicate reverse engineering efforts. Threat intelligence analysis identified the malware's Command-and-Control (C2) infrastructure and associated the sample with the **Agent Tesla Remote Access Trojan (RAT)** family.
+
+By correlating evidence collected from network traffic, volatile memory, and malware analysis, the investigation successfully reconstructed the attack lifecycle, identified the persistence mechanism, discovered the reverse shell communication, extracted and analyzed the implanted malware, and attributed the sample to a known malware family.
+
+This investigation demonstrates the importance of combining multiple forensic disciplines during incident response. Network forensics provided visibility into attacker communications, memory forensics exposed volatile artifacts that were unavailable on disk, and malware analysis confirmed the malware's capabilities and attribution. Together, these techniques enabled a comprehensive understanding of the compromise and illustrated a structured methodology for conducting digital forensic investigations.
+
+---
+
+# Key Findings
+
+* Identified the Windows kernel base address from the captured memory image.
+* Located the malicious persistence executable within the Windows Startup folder.
+* Determined that the IIS Worker Process (`w3wp.exe`) launched the implanted executable.
+* Correlated the reverse shell communication with the malicious process.
+* Successfully extracted the malware sample from memory using Volatility 3.
+* Determined that the executable was packed using **UPX**.
+* Identified the malware's Command-and-Control (C2) domain.
+* Associated the malware sample with the **Agent Tesla Remote Access Trojan (RAT)** family through open-source threat intelligence.
+* Successfully reconstructed the complete attack timeline by correlating evidence from network traffic, memory artifacts, and malware analysis.
+
+---
+
+# Skills Demonstrated
+
+* Digital Forensics
+* Incident Response
+* Network Forensics
+* Memory Forensics
+* Malware Analysis
+* Static Malware Analysis
+* Threat Intelligence
+* Windows Memory Analysis
+* Process Tree Analysis
+* Network Connection Analysis
+* Malware Extraction
+* Volatility 3
+* Wireshark
+* VirusTotal
+* Detect It Easy (DIE)
+* Windows Internals
+* Reverse Shell Investigation
+* Persistence Analysis
+* Evidence Correlation
+
+---
