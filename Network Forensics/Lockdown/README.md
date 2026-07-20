@@ -154,7 +154,7 @@ Port **4443** was used as the reverse shell listener.
 - MITRE ATT&CK Mapping
 
 # Memory Dump Analysis
-
+![](R.jpg)
 ## Overview
 
 This section focuses on the **Memory Forensics** phase of the investigation.
