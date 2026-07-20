@@ -182,7 +182,7 @@ After identifying the attacker’s activity through network traffic analysis, th
 ### Method
 
 The Windows kernel information was extracted using the following Volatility plugin:
-![](Screenshot%2020326-07-20%20190834.png)
+
 ```powershell
 .\vol.exe -f C:\Intel\memdump.mem windows.info
 ```
@@ -196,8 +196,7 @@ The plugin returns detailed operating system information including:
 - Build Number
 
 ### Evidence
-
-
+![](Screenshot%202026-07-20%20185728.png)
 
 # Q7 - Persistence Executable
 
@@ -228,13 +227,7 @@ services.exe
 Unlike legitimate IIS binaries, the executable was located inside the Windows Startup folder.
 
 ### Evidence
-
-*(Add screenshot here)*
-
-```
-images/
-└── q7-process-tree.png
-```
+![](Screenshot%2020326-07-20%20190834.png)
 
 ### Answer
 
