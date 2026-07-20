@@ -79,7 +79,7 @@ showed the attacker initially accessing two network shares:
 ---
 
 ## 4. Web Shell Upload
-
+![](Screenshot%202026-07-20%20174614.png)
 Reviewing SMB Create Requests revealed the attacker creating a malicious ASP.NET file inside the Documents share.
 
 Uploaded file:
