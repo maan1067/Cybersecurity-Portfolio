@@ -46,7 +46,7 @@ Using Wireshark Conversations and endpoint statistics, the host generating the r
 ---
 
 ## 2. Identify the Enumeration Tool
-
+![](Screenshot%202026-07-20%20183909.png)
 Filtering HTTP requests revealed the following User-Agent:
 
 ```
