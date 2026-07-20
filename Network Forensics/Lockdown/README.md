@@ -1,5 +1,5 @@
 # Lockdown Lab
-
+![](Screenshot%202026-07-20%20182345.png)
 ## Overview
 
 This lab simulates a real-world multi-stage intrusion against a public-facing Microsoft IIS server. The investigation involved analyzing network traffic, memory artifacts, and malware to reconstruct the complete attack chain.
