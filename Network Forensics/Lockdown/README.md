@@ -68,7 +68,7 @@ Filtering SMB2 Tree Connect Requests:
 ```
 smb2.cmd == 3
 ```
-
+![](Screenshot%202026-07-20%20174359.png)
 showed the attacker initially accessing two network shares:
 
 ```
