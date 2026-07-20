@@ -208,7 +208,7 @@ The plugin returns detailed operating system information including:
 ### Method
 
 The running process tree was enumerated using:
-
+![](Screenshot%202026-07-20%20190834.png)
 ```powershell
 .\vol.exe -f C:\Intel\memdump.mem windows.pstree
 ```
