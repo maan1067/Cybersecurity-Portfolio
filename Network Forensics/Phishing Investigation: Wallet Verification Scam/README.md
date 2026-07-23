@@ -176,8 +176,7 @@ This redirection chain significantly increases the likelihood that users—and e
 The destination domain strongly indicates a credential harvesting campaign targeting cryptocurrency wallet users.
 
 ### Evidence
-
-
+![](26.png)
 ---
 
 # Indicators of Compromise (IOCs)
