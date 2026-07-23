@@ -1,9 +1,8 @@
-تمام، هنكتبه بنفس أسلوب **DanaBot Lab**، احترافي ومنظم وكأنه Incident Report حقيقي.
 
 ---
 
 # Phishing Investigation: Wallet Verification Scam
-
+![](phishing-investigation-wallet-verification-scam-achievement-card.png)
 ## Overview
 
 The **Phishing Investigation: Wallet Verification Scam** lab simulates a real-world phishing email investigation conducted from the perspective of a Security Operations Center (SOC) analyst. The objective of the investigation is to determine whether a suspicious email reported by a user represents a legitimate communication or a credential harvesting phishing campaign.
