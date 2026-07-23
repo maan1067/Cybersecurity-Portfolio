@@ -112,34 +112,11 @@ This confirms that the domain relies on Google's mail infrastructure for receivi
 The investigation demonstrates that legitimate cloud email providers can be abused to distribute phishing campaigns while still successfully passing certain authentication checks.
 
 ### Evidence
+![](22.png)
+![](23.png)
+![](24.png)
+![](25.png)
 
-**Screenshot 4**
-
-IPinfo
-
-Highlight:
-
-* IP Address
-* Country
-* ASN
-* Mailgun Technologies Inc.
-
----
-
-**Screenshot 5**
-
-WHOIS
-
-Highlight:
-
-* Registered On
-* Expiration Date
-
----
-
-**Screenshot 6**
-
-MX Lookup
 
 Highlight:
 
