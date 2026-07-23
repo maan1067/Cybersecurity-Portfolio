@@ -41,9 +41,7 @@ The originating SMTP server IP address was identified as **143.55.227.147**, whi
 
 ### Evidence
 
-**Screenshot 1**
-
-* Outlook email (Subject, From, To)
+![](12.png)
 
 **Screenshot 2**
 
