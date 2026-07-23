@@ -76,15 +76,10 @@ However, DMARC validation failed because the authenticated sending domain did no
 Although SPF and DKIM individually passed, the domain alignment failure caused DMARC to reject the message as unauthenticated. This technique is frequently observed when attackers abuse legitimate third-party mailing platforms to deliver phishing emails.
 
 ### Evidence
-
-**Screenshot 3**
-
-Highlight:
-
-* Authentication-Results
-* SPF = Pass
-* DKIM = Pass
-* DMARC = Fail
+![](17.png)
+![](19.png)
+![](20.png)
+![](21.png)
 
 ---
 
