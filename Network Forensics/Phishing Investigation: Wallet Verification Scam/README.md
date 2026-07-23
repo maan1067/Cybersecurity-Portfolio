@@ -42,18 +42,12 @@ The originating SMTP server IP address was identified as **143.55.227.147**, whi
 ### Evidence
 
 ![](12.png)
-
-**Screenshot 2**
-
-* Message Header
-* Highlight:
-
-  * Subject
-  * From
-  * Return-Path
-  * Received
-  * Authentication-Results
-  * X-Sender-IP
+![](13.png)
+![](14.png)
+![](15.png)
+![](16.png)
+![](17.png)
+![](18.png)
 
 ---
 
