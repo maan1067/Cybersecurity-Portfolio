@@ -47,7 +47,7 @@ The scenario specifically referenced encoded commands executed through a native 
 **Sub-technique**
 
 * **T1059.001 – PowerShell**
-
+![](1.png)
 ---
 
 ## Stage 3 – Persistence
