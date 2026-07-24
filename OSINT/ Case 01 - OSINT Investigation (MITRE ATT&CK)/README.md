@@ -1,9 +1,8 @@
-ممتاز، بما إن اللاب كان **MITRE ATT&CK Mapping باستخدام OSINT**، فالـ Documentation الأفضل يكون احترافي زى اللى عملناه فى DanaBot وPhishing، لكن يناسب طبيعة اللاب.
 
 ---
 
 # OSINT Investigation - MITRE ATT&CK Mapping
-
+![](000.png)
 ## Overview
 
 This lab focused on identifying and mapping attacker behavior to the MITRE ATT&CK Framework using Open-Source Intelligence (OSINT). Rather than analyzing malware samples or network captures, the investigation relied on interpreting attacker activities described within the scenario and identifying the corresponding MITRE ATT&CK techniques and sub-techniques.
