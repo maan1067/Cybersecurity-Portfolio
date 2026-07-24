@@ -61,7 +61,7 @@ This recurring execution mechanism is commonly abused by adversaries to achieve 
 * **T1053.005 – Scheduled Task**
 
 ### Evidence
-
+![](2.png)
 
 ---
 
