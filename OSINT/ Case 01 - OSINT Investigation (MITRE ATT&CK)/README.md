@@ -76,7 +76,7 @@ This activity represents authenticated lateral movement using Windows administra
 * **T1021.002 – SMB/Windows Admin Shares**
 
 ### Evidence
-
+![](3.png)
 
 ---
 
