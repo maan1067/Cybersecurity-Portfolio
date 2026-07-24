@@ -35,7 +35,7 @@ After reviewing the MITRE ATT&CK documentation, the activity was mapped to:
 
 * **T1566.001 – Spearphishing Attachment**
 
-
+![](T1566001.png)
 ---
 
 ## Stage 2 – Malicious Command Execution
