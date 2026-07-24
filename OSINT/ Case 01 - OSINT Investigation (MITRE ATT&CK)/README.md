@@ -34,10 +34,7 @@ After reviewing the MITRE ATT&CK documentation, the activity was mapped to:
 **Technique**
 
 * **T1566.001 – Spearphishing Attachment**
-
-### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
+![](1.png)
 
 ---
 
@@ -50,11 +47,7 @@ The scenario specifically referenced encoded commands executed through a native 
 **Sub-technique**
 
 * **T1059.001 – PowerShell**
-
-### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
-
+![](2.png)
 ---
 
 ## Stage 3 – Persistence
@@ -68,8 +61,7 @@ This recurring execution mechanism is commonly abused by adversaries to achieve 
 * **T1053.005 – Scheduled Task**
 
 ### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
+![](3.png)
 
 ---
 
@@ -84,8 +76,7 @@ This activity represents authenticated lateral movement using Windows administra
 * **T1021.002 – SMB/Windows Admin Shares**
 
 ### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
+![](4.png)
 
 ---
 
@@ -100,8 +91,7 @@ The attacker utilized standard application layer protocols to blend malicious tr
 * **T1071 – Application Layer Protocol**
 
 ### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
+![](5.png)
 
 ---
 
