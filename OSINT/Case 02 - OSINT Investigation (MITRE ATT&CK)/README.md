@@ -33,8 +33,7 @@ This behavior maps to the **Phishing: Spearphishing Link** sub-technique.
 **Technique:** T1566.002 – Phishing: Spearphishing Link
 
 ### Evidence
-
-*(Insert MITRE Screenshot Here)*
+![](002.png)
 
 ---
 
