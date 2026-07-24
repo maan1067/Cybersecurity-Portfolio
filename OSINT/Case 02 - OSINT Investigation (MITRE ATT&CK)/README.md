@@ -1,5 +1,5 @@
 # OSINT Investigation (MITRE ATT&CK) – Case 02
-
+![](Screenshot%202026-07-25%20024845.png)
 ## Overview
 
 The **OSINT Investigation (MITRE ATT&CK) – Case 02** lab focuses on identifying attacker behaviors by analyzing a simulated intrusion scenario and mapping each observed activity to the appropriate **MITRE ATT&CK** technique.
