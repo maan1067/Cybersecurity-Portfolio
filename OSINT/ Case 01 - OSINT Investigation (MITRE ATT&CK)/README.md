@@ -121,8 +121,8 @@ This behavior aligns with the MITRE ATT&CK technique for Indicator Removal.
 * **T1070 – Indicator Removal**
 
 ### Evidence
+![](6.png)
 
-*(Insert MITRE ATT&CK screenshot here)*
 
 ---
 
