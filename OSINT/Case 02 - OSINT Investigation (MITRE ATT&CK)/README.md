@@ -50,8 +50,7 @@ This behavior maps to the Windows Command Shell sub-technique.
 **Technique:** T1059.003 – Command and Scripting Interpreter: Windows Command Shell
 
 ### Evidence
-
-*(Insert MITRE Screenshot Here)*
+![](003.png)
 
 ---
 
