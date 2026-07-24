@@ -106,8 +106,7 @@ This activity corresponds to execution using the Windows Command Shell.
 * **T1059.003 – Windows Command Shell**
 
 ### Evidence
-
-*(Insert MITRE ATT&CK screenshot here)*
+![](5.png)
 
 ---
 
