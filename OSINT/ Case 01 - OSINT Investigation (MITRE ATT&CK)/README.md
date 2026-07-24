@@ -180,3 +180,4 @@ This behavior aligns with the MITRE ATT&CK technique for Indicator Removal.
 This lab demonstrated the practical application of the MITRE ATT&CK Framework for analyzing attacker behavior through OSINT. By examining each stage of the attack lifecycle, it was possible to accurately map malicious activities to their corresponding MITRE techniques and sub-techniques.
 
 The exercise reinforced an understanding of attacker tactics including Initial Access, Execution, Persistence, Lateral Movement, Command and Control, and Defense Evasion. Developing the ability to classify adversary behavior using MITRE ATT&CK improves threat hunting, incident response, detection engineering, and communication within Security Operations Centers (SOC), providing a standardized methodology for describing and responding to cyber threats.
+![](osint-mitre-1-achievement-card.png)
