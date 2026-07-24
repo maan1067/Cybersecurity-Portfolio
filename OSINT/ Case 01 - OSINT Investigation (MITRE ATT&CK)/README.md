@@ -92,7 +92,7 @@ The attacker utilized standard application layer protocols to blend malicious tr
 
 ### Evidence
 
-
+![](4.png)
 ---
 
 ## Stage 6 – Command Execution Using Windows Command Shell
