@@ -67,8 +67,7 @@ This behavior maps to **LSASS Memory**.
 **Technique:** T1003.001 – OS Credential Dumping: LSASS Memory
 
 ### Evidence
-
-*(Insert MITRE Screenshot Here)*
+![](004.png)
 
 ---
 
@@ -83,8 +82,7 @@ This technique allows malware to launch every time Windows starts without requir
 **Technique:** T1547.001 – Boot or Logon Autostart Execution: Registry Run Keys / Startup Folder
 
 ### Evidence
-
-*(Insert MITRE Screenshot Here)*
+![](005.png)
 
 ---
 
@@ -100,7 +98,7 @@ Staging data simplifies exfiltration by organizing collected files before they a
 
 ### Evidence
 
-*(Insert MITRE Screenshot Here)*
+![](006.png)
 
 ---
 
@@ -116,8 +114,7 @@ Archiving data before exfiltration is commonly used to speed up transfers while 
 
 ### Evidence
 
-*(Insert MITRE Screenshot Here)*
-
+![](007.png)
 ---
 
 ## Stage 7 – Data Exfiltration
@@ -131,8 +128,7 @@ Using an established C2 channel helps blend exfiltration traffic with normal att
 **Technique:** T1041 – Exfiltration Over C2 Channel
 
 ### Evidence
-
-*(Insert MITRE Screenshot Here)*
+![](008.png)
 
 ---
 
@@ -148,7 +144,7 @@ Rather than using uncommon protocols, the attacker blended malicious traffic int
 
 ### Evidence
 
-*(Insert MITRE Screenshot Here)*
+![](009.png)
 
 ---
 
@@ -164,7 +160,7 @@ Removing forensic artifacts makes incident response more difficult and complicat
 
 ### Evidence
 
-*(Insert MITRE Screenshot Here)*
+![](100.png)
 
 ---
 
