@@ -217,3 +217,4 @@ This investigation demonstrated how the MITRE ATT&CK Framework can be used to ac
 Starting with a phishing email containing a malicious link, the attacker executed commands, dumped credentials from LSASS memory, established persistence using Registry Run Keys, staged and archived collected files, communicated with external infrastructure using application-layer protocols, exfiltrated sensitive information through an existing Command and Control channel, and finally attempted to evade detection by removing forensic evidence from system logs.
 
 By mapping each activity to the appropriate MITRE ATT&CK technique, the complete attack lifecycle was reconstructed, reinforcing practical knowledge of adversary tactics and improving the ability to recognize similar behaviors during real-world SOC investigations and threat hunting activities.
+![](osint-mitre-2-achievement-card.png)
