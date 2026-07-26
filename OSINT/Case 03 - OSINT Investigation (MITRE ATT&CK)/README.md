@@ -108,7 +108,7 @@ Investigation also identified the use of the **ImpersonateLoggedOnUser** API, wh
 
 ### Evidence
 
-
+![](y.png)
 
 ---
 
