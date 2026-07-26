@@ -92,7 +92,7 @@ The Windows Command Shell was abused to execute system commands and interact wit
 **Technique:** T1059.003 – Command and Scripting Interpreter: Windows Command Shell
 
 ### Evidence
-![](r.png)
+![](t.png)
 
 ---
 
@@ -108,7 +108,7 @@ Investigation also identified the use of the **ImpersonateLoggedOnUser** API, wh
 
 ### Evidence
 
-![](t.png)
+
 
 ---
 
