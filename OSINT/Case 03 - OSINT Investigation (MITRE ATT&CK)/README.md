@@ -62,7 +62,7 @@ This behavior maps to Exploit Public-Facing Application.
 **Technique:** T1190 – Exploit Public-Facing Application
 
 ### Evidence
-![](w.png)
+![](e.png)
 
 ---
 
@@ -77,7 +77,7 @@ Rather than exploiting the vulnerability manually, sqlmap was used to identify i
 **Software:** S0768 – sqlmap
 
 ### Evidence
-![](e.png)
+![](r.png)
 
 ---
 
