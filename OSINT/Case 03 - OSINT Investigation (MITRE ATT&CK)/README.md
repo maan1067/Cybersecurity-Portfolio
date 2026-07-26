@@ -137,9 +137,6 @@ Disabling defensive tools reduced visibility and allowed the attacker to continu
 
 **Technique:** T1562.001 – Impair Defenses: Disable or Modify Tools
 
-### Evidence
-
-
 > **Note**
 >
 > The latest versions of MITRE ATT&CK introduce **T1685 – Disable or Modify Tools**.
