@@ -253,3 +253,4 @@ This investigation demonstrated how the MITRE ATT&CK Framework can be used to ac
 Beginning with external reconnaissance and SQL Injection, the attacker established command execution, escalated privileges, created persistence, disabled defensive tools, deployed collection malware, exfiltrated sensitive information through GitHub, and ultimately defaced the organization's public-facing website.
 
 By correlating each activity with MITRE ATT&CK, the complete attack lifecycle was successfully reconstructed, strengthening practical understanding of attacker behavior and reinforcing skills commonly required during real-world SOC investigations, incident response engagements, and threat hunting operations.
+![](osint-mitre-3-achievement-card.png)
