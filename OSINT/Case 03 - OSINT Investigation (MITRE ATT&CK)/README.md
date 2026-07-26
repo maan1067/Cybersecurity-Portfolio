@@ -62,8 +62,7 @@ This behavior maps to Exploit Public-Facing Application.
 **Technique:** T1190 – Exploit Public-Facing Application
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](w.png)
 
 ---
 
@@ -78,8 +77,7 @@ Rather than exploiting the vulnerability manually, sqlmap was used to identify i
 **Software:** S0768 – sqlmap
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](e.png)
 
 ---
 
@@ -94,8 +92,7 @@ The Windows Command Shell was abused to execute system commands and interact wit
 **Technique:** T1059.003 – Command and Scripting Interpreter: Windows Command Shell
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](r.png)
 
 ---
 
@@ -111,7 +108,7 @@ Investigation also identified the use of the **ImpersonateLoggedOnUser** API, wh
 
 ### Evidence
 
-*(Insert Screenshot Here)*
+![](t.png)
 
 ---
 
@@ -126,8 +123,7 @@ This ensured the payload would automatically execute whenever the service starte
 **Technique:** T1543.003 – Create or Modify System Process: Windows Service
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](y.png)
 
 ---
 
@@ -143,8 +139,7 @@ Disabling defensive tools reduced visibility and allowed the attacker to continu
 
 ### Evidence
 
-*(Insert Screenshot Here)*
-
+![](u.png)
 > **Note**
 >
 > The latest versions of MITRE ATT&CK introduce **T1685 – Disable or Modify Tools**.
@@ -166,8 +161,7 @@ Analysis of its documented behavior showed that the malware primarily performs a
 **Associated Tactic:** TA0009 – Collection
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](i.png)
 
 ---
 
@@ -185,7 +179,7 @@ The most appropriate mitigation was restricting unauthorized access to external 
 
 ### Evidence
 
-*(Insert Screenshot Here)*
+![](o.png)
 
 ---
 
@@ -200,8 +194,7 @@ This behavior represents website defacement intended to damage the organization'
 **Technique:** T1491.002 – Defacement: External Defacement
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](p.png)
 
 ---
 
