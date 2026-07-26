@@ -1,7 +1,3 @@
-ممتاز، بما إن ده هيكون Portfolio Project، فالأفضل يكون بنفس مستوى المشاريع اللي عملتها قبل كده.
-اقترح يكون بعنوان:
-
-# **Shadow Rat – OSINT Threat Intelligence Investigation (Agent Tesla)**
 
 ---
 
