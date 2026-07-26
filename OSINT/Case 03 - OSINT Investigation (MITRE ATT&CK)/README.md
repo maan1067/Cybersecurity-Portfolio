@@ -2,7 +2,7 @@
 ---
 
 # OSINT Investigation (MITRE ATT&CK) – Case 03
-
+![](Screenshot%202026-07-26%20042006.png)
 ## Overview
 
 The **OSINT Investigation (MITRE ATT&CK) – Case 03** lab focuses on reconstructing an attack by identifying attacker behaviors and accurately mapping each activity to the MITRE ATT&CK Framework.
