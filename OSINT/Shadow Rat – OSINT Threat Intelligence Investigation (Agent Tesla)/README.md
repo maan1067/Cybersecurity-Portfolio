@@ -66,7 +66,7 @@ Static analysis revealed the malware compilation timestamp embedded within the P
 
 ### Evidence
 
-*(Insert Screenshot)*
+![](s.png)
 
 ---
 
