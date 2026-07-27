@@ -205,8 +205,7 @@ sendboxorigin@onionmail.org
 ```
 
 ### Evidence
-
-*(Insert Screenshot)*
+![](l.png)
 
 ---
 
