@@ -3,7 +3,7 @@
 ---
 
 # Shadow Rat Investigation (Agent Tesla Malware Analysis)
-
+![](a.png)
 ## Overview
 
 The **Shadow Rat** investigation focused on analyzing a malicious Windows executable associated with the **Agent Tesla** information stealer. The objective of this investigation was to reconstruct the malware's behavior using dynamic malware analysis, threat intelligence, and sandbox analysis.
