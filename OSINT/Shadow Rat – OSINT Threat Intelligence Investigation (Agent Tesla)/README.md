@@ -2,7 +2,7 @@
 ---
 
 # Shadow Rat – OSINT Threat Intelligence Investigation (Agent Tesla)
-
+![](a.png)
 ## Overview
 
 The **Shadow Rat – OSINT Threat Intelligence Investigation** focused on analyzing a malware execution using public threat intelligence resources and sandbox analysis to reconstruct the attack lifecycle.
