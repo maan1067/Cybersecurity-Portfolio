@@ -347,3 +347,4 @@ This investigation successfully reconstructed the complete execution chain of an
 Beginning with the initial payload execution, the malware established persistence through the Windows Startup folder, executed an AutoIt loader using an obfuscated PowerShell command, gathered system information through Windows Registry queries, contacted external services for host reconnaissance, and configured SMTP infrastructure to exfiltrate stolen credentials.
 
 By combining **ANY.RUN**, **VirusTotal**, **CyberChef**, and the **MITRE ATT&CK Framework**, the full malware behavior, attacker infrastructure, and Indicators of Compromise were identified, providing a comprehensive understanding of the attack lifecycle and strengthening practical malware analysis and SOC investigation skills.
+![](shadow-rat-achievement-card.png)
