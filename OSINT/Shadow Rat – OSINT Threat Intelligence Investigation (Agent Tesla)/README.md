@@ -41,10 +41,6 @@ Static analysis using VirusTotal identified the suspicious executable and provid
 * PE32+ Windows executable.
 * AutoIt loader detected.
 * Agent Tesla indicators observed.
-
-### Evidence
-![](s.png)
-
 ---
 
 # Stage 2 – Malware Timeline
@@ -58,10 +54,8 @@ VirusTotal metadata revealed the malware compilation timestamp.
 ```
 2026-04-18 00:53:38 UTC
 ```
-
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](s.png)
 
 ---
 
@@ -83,7 +77,6 @@ The malware then executed PowerShell using an encoded Base64 command.
 
 ### Evidence
 
-*(Insert Screenshot Here)*
 
 ---
 
