@@ -76,7 +76,7 @@ The malware then executed PowerShell using an encoded Base64 command.
 **T1059.001 – PowerShell**
 
 ### Evidence
-![](d.png)
+
 
 ---
 
