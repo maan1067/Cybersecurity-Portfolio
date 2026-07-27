@@ -154,9 +154,8 @@ env:TEMP
 ```
 
 ### Evidence
-
-*(Insert Screenshot)*
-
+![](j.png)
+![](k.png)
 ---
 
 # Stage 7 — Registry Discovery
