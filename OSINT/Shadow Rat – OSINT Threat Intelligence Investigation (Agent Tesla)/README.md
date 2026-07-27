@@ -108,8 +108,7 @@ Registry Run Keys / Startup Folder
 ```
 
 ### Evidence
-
-*(Insert Screenshot)*
+![](f.png)
 
 ---
 
