@@ -43,8 +43,7 @@ Static analysis using VirusTotal identified the suspicious executable and provid
 * Agent Tesla indicators observed.
 
 ### Evidence
-
-*(Insert Screenshot Here)*
+![](s.png)
 
 ---
 
