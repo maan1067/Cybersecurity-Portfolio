@@ -77,7 +77,7 @@ The malware then executed PowerShell using an encoded Base64 command.
 
 ### Evidence
 
-
+![](h.png)
 ---
 
 # Stage 4 – PowerShell Analysis
