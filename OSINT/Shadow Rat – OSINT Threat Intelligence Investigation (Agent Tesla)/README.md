@@ -229,8 +229,7 @@ Agent Tesla
 ```
 
 ### Evidence
-
-*(Insert Screenshot)*
+![](%3B.png)
 
 ---
 
