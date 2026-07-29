@@ -100,9 +100,8 @@ Sorting every logged source port revealed the attacker utilized ports ranging fr
 The continuously changing source ports indicate automated connection attempts rather than a legitimate user session.
 
 ### Evidence
-
-*(Insert screenshot showing sorted source ports)*
-
+![](mm.png)
+![](1999.png)
 ---
 
 ## Stage 6 – Attack Pattern Analysis
