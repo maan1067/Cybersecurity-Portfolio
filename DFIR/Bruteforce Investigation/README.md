@@ -55,7 +55,7 @@ Analysis of the **Account For Which Logon Failed** section revealed that the att
 This strongly suggested an automated dictionary or password brute-force attack against the default administrative account.
 
 ### Evidence
-![](vv.png)
+![](zz.png)
 
 ---
 
