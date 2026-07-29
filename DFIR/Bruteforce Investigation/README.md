@@ -85,9 +85,7 @@ The address was associated with:
 
 This attribution provided additional context regarding the origin of the attack.
 
-### Evidence
-
-*(Insert screenshot showing Source Network Address)*
+![](bb.png)
 
 ---
 
