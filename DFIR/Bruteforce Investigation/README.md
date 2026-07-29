@@ -67,8 +67,7 @@ The Failure Information section showed the same failure reason across every auth
 The repeated occurrence of this message confirmed unsuccessful password guessing attempts.
 
 ### Evidence
-
-*(Insert screenshot showing Failure Reason)*
+![](xx.png)
 
 ---
 
