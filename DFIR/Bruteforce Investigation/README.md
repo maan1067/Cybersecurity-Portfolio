@@ -2,7 +2,7 @@
 ---
 
 # Bruteforce Investigation
-
+![](Screenshot%202026-07-29%20033419.png)
 ## Overview
 
 The Bruteforce Investigation Lab focuses on analyzing Windows Security Event Logs generated during a Remote Desktop Protocol (RDP) brute-force attack.
