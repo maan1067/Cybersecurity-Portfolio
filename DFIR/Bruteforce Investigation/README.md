@@ -41,8 +41,7 @@ The logs contained thousands of **Audit Failure** events corresponding to Window
 Each event was inspected to identify the authentication information, failure reason, account details, source IP address, and network information.
 
 ### Evidence
-
-*(Insert screenshot showing Event ID 4625 entries)*
+![](cc.png)
 
 ---
 
