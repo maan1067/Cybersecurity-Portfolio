@@ -122,8 +122,7 @@ eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJmbGFnIjoiQlRMe180X0V5ZXN9IiwiaWF0Ijo5MDA
 
 ### Evidence
 
-JWT.io Verification
-
+![](upload_0d6c4fa46c079681efc3565bd1c20a7a.png)
 ---
 
 # Challenge Answers
