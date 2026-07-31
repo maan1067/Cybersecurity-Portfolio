@@ -66,7 +66,7 @@ The hidden clue extracted from the payload was:
 
 ### Evidence
 
-Decoded JWT Payload
+![](846.png)
 
 ---
 
