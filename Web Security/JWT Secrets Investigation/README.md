@@ -1,6 +1,6 @@
 
 # JWT Secrets Investigation
-
+![](Screenshot%202026-08-01%20004000.png)
 ## Overview
 
 The JWT Secrets Investigation focused on analyzing a JSON Web Token (JWT) used to authorize privileged actions inside a simulated web application.
