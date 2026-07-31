@@ -33,7 +33,7 @@ Analysis of the header identified the signing algorithm as **HS256**.
 
 * Token Type: JWT
 * Algorithm: HS256
-
+![](844.png)
 ---
 
 ## Stage 2 – Token Structure Analysis
