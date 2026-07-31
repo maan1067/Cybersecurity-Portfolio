@@ -67,7 +67,7 @@ The hidden clue extracted from the payload was:
 ### Evidence
 
 ![](846.png)
-
+![](845.png)
 ---
 
 ## Stage 3 – Secret Recovery
