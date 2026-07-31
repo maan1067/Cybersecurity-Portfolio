@@ -92,7 +92,7 @@ bT!0
 
 ### Evidence
 
-Hashcat Recovery Output
+![](847.png)
 
 ---
 
