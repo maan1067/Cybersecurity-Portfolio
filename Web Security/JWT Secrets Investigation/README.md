@@ -195,4 +195,4 @@ Applications relying on weak HS256 secrets are vulnerable to token forgery attac
 * Security Assessment
 
 ---
-
+![](Screenshot%202026-08-01%20003351.png)
