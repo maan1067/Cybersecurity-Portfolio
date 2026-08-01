@@ -149,8 +149,7 @@ This confirmed that the attacker exfiltrated the Linux password hash database:
 **/etc/shadow**
 
 Evidence
-
-*(Screenshot)*
+![](WhatsApp%20Image%20%20AM.png)
 
 ---
 
