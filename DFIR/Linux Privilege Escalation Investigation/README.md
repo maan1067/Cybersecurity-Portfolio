@@ -83,8 +83,7 @@ Analysis of executed binaries revealed the use of:
 which is commonly used to enumerate privilege escalation opportunities on Linux systems.
 
 Evidence
-
-*(Screenshot)*
+![](903.png)
 
 ---
 
