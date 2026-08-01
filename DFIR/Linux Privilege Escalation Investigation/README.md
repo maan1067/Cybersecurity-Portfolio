@@ -57,10 +57,6 @@ This activity indicated a classic:
 
 used to gain initial access.
 
-Evidence
-
-*(Screenshot)*
-
 ---
 
 ## Stage 3 – Attacker Identification
@@ -72,9 +68,8 @@ The investigation determined the attacker originated from:
 **192.168.4.155**
 
 Evidence
-
-*(Screenshot)*
-
+![](901)
+![](902)
 ---
 
 ## Stage 4 – System Enumeration
