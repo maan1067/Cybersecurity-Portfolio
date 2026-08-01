@@ -44,7 +44,7 @@ Evidence
 ```bash
 grep 'comm=' audit.log | cut -d'"' -f2 | sort | uniq -c | sort -nr
 ```
-
+![](900.png)
 ---
 
 ## Stage 2 – Malicious Binary Identification
