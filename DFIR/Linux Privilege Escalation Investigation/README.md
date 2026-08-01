@@ -68,8 +68,8 @@ The investigation determined the attacker originated from:
 **192.168.4.155**
 
 Evidence
-![](901)
-![](902)
+![](901.png)
+![](902.png)
 ---
 
 ## Stage 4 – System Enumeration
