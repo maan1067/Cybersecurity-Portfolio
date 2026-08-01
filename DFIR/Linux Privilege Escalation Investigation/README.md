@@ -43,7 +43,7 @@ Authentication records confirmed that the attacker successfully authenticated us
 
 Evidence
 
-*(Screenshot)*
+![](900.png)
 
 ---
 
