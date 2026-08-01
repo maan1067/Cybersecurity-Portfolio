@@ -227,3 +227,4 @@ Evidence
 * MITRE ATT&CK Mapping
 * Digital Forensics
 * Timeline Reconstruction
+![](Screenshot%202026-08-01%20042328.png)
