@@ -104,8 +104,7 @@ This confirmed that the binary responsible for obtaining root privileges was:
 **evil (PID 829992)**
 
 Evidence
-
-*(Screenshot)*
+![](904.png)
 
 ---
 
@@ -120,8 +119,7 @@ also known as **Baron Samedit**.
 This vulnerability affects the Linux **sudo** utility and allows local users to escalate privileges to root.
 
 Evidence
-
-*(Screenshot)*
+![](905.png)
 
 ---
 
@@ -134,8 +132,7 @@ Research into CVE-2021-3156 identified the underlying vulnerability as:
 The flaw allows attackers to overwrite heap memory and achieve arbitrary code execution with elevated privileges.
 
 Evidence
-
-*(Screenshot)*
+![](905.png)
 
 ---
 
