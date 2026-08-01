@@ -2,7 +2,7 @@
 ---
 
 # Linux Privilege Escalation Investigation
-
+![](Screenshot%202026-08-01%20043134.png)
 ## Overview
 
 The Linux Privilege Escalation Investigation Lab focuses on analyzing Linux Auditd logs to reconstruct a privilege escalation attack that resulted in full root access.
