@@ -217,7 +217,7 @@ The final access originated from:
 ```text
 103.69.55.212
 ```
-
+![](912.png)
 ---
 
 # Stage 6 – Attack Timeline Reconstruction
