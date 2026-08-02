@@ -103,7 +103,7 @@ WPScan
 1 wpscan
 1 WPScan
 ```
-
+![](910.png)
 ---
 
 # Stage 3 – Vulnerable Plugin Investigation
