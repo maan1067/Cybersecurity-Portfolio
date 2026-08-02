@@ -185,7 +185,7 @@ fr34k.php
 ```
 
 The web shell provided the attacker with a mechanism to interact with the compromised server after gaining access.
-
+![](911.png)
 ---
 
 # Stage 5 – Web Shell Access Analysis
