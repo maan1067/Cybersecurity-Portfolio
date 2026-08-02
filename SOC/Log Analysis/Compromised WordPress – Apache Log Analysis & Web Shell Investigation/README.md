@@ -365,3 +365,4 @@ The final request to the web shell originated from `103.69.55.212` and returned 
 Overall, the investigation successfully reconstructed the compromise chain and extracted actionable IOCs that can be used for future threat hunting, detection, and incident response activities.
 
 ---
+![](08-02%20025839.png)
