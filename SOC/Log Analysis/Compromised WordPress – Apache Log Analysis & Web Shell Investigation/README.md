@@ -70,7 +70,7 @@ GET /wp-admin/
 ```
 
 This confirmed that the attacker gained access through the hidden WordPress administrative login panel.
-
+![](909.png)
 ---
 
 # Stage 2 – Attacker Tool Identification
