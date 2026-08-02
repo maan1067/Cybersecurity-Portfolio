@@ -1,7 +1,7 @@
 
 
 # Compromised WordPress Lab
-
+![](Screenshot%202026-08-02%20031912.png)
 ## Overview
 
 The **Compromised WordPress Lab** focused on analyzing Apache access logs to reconstruct a web application compromise and determine how an attacker gained administrative access, exploited vulnerable WordPress components, and ultimately deployed a PHP web shell.
