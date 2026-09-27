@@ -64,7 +64,7 @@ The SDP negotiation showed:
 - RTP port: **4000 → 4002**
 
 **Evidence:**  
-→ Screenshot of VoIP Calls window  
+![](Screenshot%202026-09-27%20230120.png)
 → Screenshot of SIP INVITE / 200 OK packets
 
 ---
