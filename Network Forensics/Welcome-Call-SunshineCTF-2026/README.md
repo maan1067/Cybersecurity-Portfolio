@@ -41,7 +41,7 @@ No TCP traffic was present. The entire conversation occurred between:
 - `192.0.2.20`
 
 **Evidence:**  
-→ Screenshot of Protocol Hierarchy Statistics
+![](12.png)
 
 ---
 
