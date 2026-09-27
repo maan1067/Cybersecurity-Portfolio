@@ -65,7 +65,7 @@ The SDP negotiation showed:
 
 **Evidence:**  
 ![](Screenshot%202026-09-27%20230120.png)
-→ Screenshot of SIP INVITE / 200 OK packets
+![](13.png)
 
 ---
 
