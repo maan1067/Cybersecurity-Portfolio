@@ -111,7 +111,7 @@ After reversing, the spoken message became clear:
 > Thank you and have a good one.
 
 **Evidence:**  
-→ Screenshot of Audacity before Reverse  
+![](Screenshot%202026-09-28%20123936.png)
 → Screenshot of Audacity after Reverse  
 → (Optional) Waveform comparison
 
