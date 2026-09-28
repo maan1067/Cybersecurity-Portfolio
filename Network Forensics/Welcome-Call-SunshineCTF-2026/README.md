@@ -112,8 +112,9 @@ After reversing, the spoken message became clear:
 
 **Evidence:**  
 ![](Screenshot%202026-09-28%20123936.png)
-→ Screenshot of Audacity after Reverse  
-→ (Optional) Waveform comparison
+![](16.png)
+
+![](17.png)
 
 ---
 
