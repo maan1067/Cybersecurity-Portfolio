@@ -86,8 +86,8 @@ The RTP stream was inspected under **Telephony → RTP → RTP Streams**:
 The audio was exported and converted from μ-law to WAV for analysis.
 
 **Evidence:**  
-→ Screenshot of RTP Streams window  
-→ Screenshot of UDP Conversations
+![](14.png)
+![](15.png)
 
 ---
 
