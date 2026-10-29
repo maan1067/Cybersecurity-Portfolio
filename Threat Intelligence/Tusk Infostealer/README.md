@@ -46,7 +46,7 @@ The investigation demonstrates how threat intelligence reporting can connect sus
 
 The report describes multiple related sub-campaigns using different impersonation themes. The timeline below is a high-level summary of the campaign structure, not an exact chronological reconstruction of every event.
 
-![Tusk Campaign Timeline](images/campaign-timeline.png)
+![Tusk Campaign Timeline](campaign-timeline.png)
 
 *Campaign overview image. Use a screenshot or figure from the original report if presenting this as source evidence.*
 
