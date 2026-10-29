@@ -84,7 +84,7 @@ flowchart TD
 
 ### Downloader Execution Flow
 
-![Downloader Execution Flow](images/downloader-flow.png)
+![Downloader Execution Flow](downloader-flow.png)
 
 *Illustration of the downloader's role in retrieving and extracting additional payloads. Replace this image with a verified screenshot or diagram if it is intended to represent direct evidence from the report.*
 
