@@ -118,7 +118,7 @@ This technique is known as **brand impersonation**. Attackers abuse the reputati
 
 #### Website comparison
 
-![TidyMe Website Comparison](images/tidyme-comparison.png)
+![TidyMe Website Comparison](tidyme-comparison.png)
 
 *Use verified screenshots from the original Kaspersky report for a direct comparison between the malicious website and the legitimate project.*
 
