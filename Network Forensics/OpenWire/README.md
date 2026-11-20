@@ -111,7 +111,7 @@ The IPv4 Endpoints statistics were reviewed to understand the traffic distributi
 | 128.199.52.72 | 10 | 1,210 | 789 | 421 |
 | 134.209.197.3 | 4,889 | 4,929,108 | 257,226 | 4,671,882 |
 | 146.190.21.92 | 4,867 | 4,927,186 | 4,670,705 | 256,481 |
-
+![](image_2026-11-20_185721230.png)
 The endpoint statistics showed a significant amount of traffic transmitted from `146.190.21.92` toward `134.209.197.3`.
 
 This supported prioritizing the communication between these two hosts for deeper analysis.
