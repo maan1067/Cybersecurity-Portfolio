@@ -50,7 +50,7 @@ This provided an overview of the protocols present in the captured traffic and h
 | OpenWire | 2 | 466 |
 | XML | 2 | 1,632 |
 | Data | 30 | 41,999 |
-
+![](image_2026-11-20_183749870.png)
 The capture contained 4,889 frames with a total size of 4,929,108 bytes.
 
 TLS represented the majority of the captured traffic by volume. However, encrypted traffic alone is not sufficient to establish malicious activity.
