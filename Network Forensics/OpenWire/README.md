@@ -186,7 +186,7 @@ Therefore, the XML demonstrates an execution attempt, but the PCAP alone does no
 **Finding:** The XML payload contained a command consistent with an attempt to retrieve and execute a remote Linux binary.
 
 ### 7. Payload Download Investigation
-
+![](image_2026-11-20_194611034.png)
 The HTTP traffic was then examined for the requested executable.
 
 A request was identified:
