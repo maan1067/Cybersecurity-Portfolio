@@ -94,7 +94,7 @@ The following connections were identified:
 | 134.209.197.3 | 146.190.21.92 | 8000 | 1, 2 |
 | 134.209.197.3 | 128.199.52.72 | 80 | 3 |
 | 134.209.197.3 | 146.190.21.92 | 443 | 4 |
-
+![](image_2026-11-20_185208729.png)
 Port `61616` was particularly important because it is commonly associated with Apache ActiveMQ and its OpenWire protocol.
 
 The connection was therefore selected for further investigation.
