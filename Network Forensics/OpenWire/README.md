@@ -1,5 +1,5 @@
 # OpenWire Lab – Network Forensics
-
+![](image_2026-11-20_182831602.png)
 ## Overview
 
 This investigation focuses on analyzing a network packet capture (PCAP) to identify and reconstruct suspicious activity targeting a public-facing server.
