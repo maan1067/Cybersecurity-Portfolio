@@ -133,6 +133,8 @@ The connection involved:
 | Protocol Context | OpenWire / Apache ActiveMQ |
 
 ![](image_2026-11-20_191323925.png)
+
+![](image_2026-11-20_192002611.png)
 Port `61616` is commonly used by Apache ActiveMQ for OpenWire communication.
 
 The investigation identified Apache ActiveMQ as the vulnerable service associated with the attack scenario.
