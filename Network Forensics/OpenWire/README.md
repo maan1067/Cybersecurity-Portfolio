@@ -70,7 +70,7 @@ Three main IP conversations were observed:
 | 84.239.49.16 | 134.209.197.3 | 12 | 712 |
 | 134.209.197.3 | 128.199.52.72 | 10 | 1,210 |
 | 146.190.21.92 | 134.209.197.3 | 4,867 | 4,927,186 |
-
+![](image_2026-11-20_184012931.png)
 The IP address `134.209.197.3` appeared in all three conversations and was identified as the central server in the observed communication pattern.
 
 The largest conversation involved:
